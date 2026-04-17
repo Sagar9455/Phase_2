@@ -3,32 +3,50 @@
 set -e
 
 echo "======================================="
-echo "   UDS Auto Build (One Command)"
+echo "   UDS FULL AUTO BUILD (ZERO SETUP)"
 echo "======================================="
 
-# STEP 1: System dependencies (fix Pillow + build tools)
+# STEP 0: Ensure apt works
 
-echo "[1/5] Installing system dependencies..."
-sudo apt-get update
+echo "[0/6] Preparing system..."
+sudo apt-get update -y
+
+# STEP 1: Install Python if missing
+
+echo "[1/6] Checking Python..."
+if ! command -v python3 >/dev/null 2>&1; then
+echo "Installing Python3..."
+sudo apt-get install -y python3
+fi
+
+# STEP 2: Install pip if missing
+
+echo "[2/6] Checking pip..."
+if ! python3 -m pip --version >/dev/null 2>&1; then
+echo "Installing pip..."
+sudo apt-get install -y python3-pip
+fi
+
+# STEP 3: Install system dependencies (Pillow fix)
+
+echo "[3/6] Installing system dependencies..."
 sudo apt-get install -y 
-python3-pip python3-dev build-essential 
+python3-dev build-essential 
 libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev 
 libopenjp2-7-dev libtiff5-dev libwebp-dev 
 tcl8.6-dev tk8.6-dev
 
-# STEP 2: Python setup
+# STEP 4: Python dependencies
 
-echo "[2/5] Setting up Python..."
-pip3 install --upgrade pip setuptools wheel
+echo "[4/6] Installing Python packages..."
 
-# Install Pillow as binary (IMPORTANT FIX)
+python3 -m pip install --upgrade pip setuptools wheel
 
-pip3 install --only-binary :all: Pillow
+# Install Pillow safely (no compile errors)
 
-# STEP 3: Install required packages
+python3 -m pip install --only-binary :all: Pillow
 
-echo "[3/5] Installing Python packages..."
-pip3 install 
+python3 -m pip install 
 pyinstaller 
 RPi.GPIO 
 adafruit-circuitpython-ssd1306 
@@ -37,16 +55,16 @@ python-can
 can-isotp 
 udsoncan
 
-# STEP 4: Prepare project
+# STEP 5: Prepare project
 
-echo "[4/5] Preparing project..."
+echo "[5/6] Preparing project..."
 touch drivers/**init**.py
 
-# STEP 5: Build executable
+# STEP 6: Build executable
 
-echo "[5/5] Building executable..."
+echo "[6/6] Building executable..."
 
-pyinstaller 
+python3 -m PyInstaller 
 --onefile 
 --name uds_diagnostics 
 --add-data "config.json:." 
@@ -83,5 +101,10 @@ main.py
 echo ""
 echo "======================================="
 echo " ✅ BUILD COMPLETE"
-echo " Run: sudo ./dist/uds_diagnostics"
+echo "======================================="
+echo "Executable:"
+echo "  dist/uds_diagnostics"
+echo ""
+echo "Run using:"
+echo "  sudo ./dist/uds_diagnostics"
 echo "======================================="
