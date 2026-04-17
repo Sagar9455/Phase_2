@@ -1,11 +1,131 @@
-New
-import sys
-import os
+#!/bin/bash
+# ============================================================
+#  UDS Diagnostics - Raspberry Pi Build Script (with venv)
+# ============================================================
 
-def resource_path(relative_path):
-    if getattr(sys, 'frozen', False):
-        return os.path.join(sys._MEIPASS, relative_path)
-    return os.path.join(os.path.dirname(__file__), relative_path)
+set -e
 
-config_path = resource_path("config.json")
-testcase_path = resource_path("../supportfiles/testcase.txt")
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+APP_NAME="uds_diagnostics"
+OUTPUT_DIR="$PROJECT_DIR/dist"
+VENV_DIR="$PROJECT_DIR/venv"
+
+echo ""
+echo "=============================================="
+echo "  UDS Diagnostics - Raspberry Pi Build Tool"
+echo "=============================================="
+echo ""
+
+# --- Step 1: Check Python version ---
+echo "[1/8] Checking Python..."
+python3 --version || { echo "ERROR: python3 not found. Install it with: sudo apt install python3"; exit 1; }
+
+# --- Step 2: Install pip if missing ---
+echo "[2/8] Checking pip..."
+python3 -m pip --version 2>/dev/null || {
+    echo "pip not found, installing..."
+    sudo apt-get update
+    sudo apt-get install -y python3-pip python3-venv
+}
+
+# --- Step 3: Create virtual environment ---
+echo "[3/8] Creating virtual environment..."
+if [ ! -d "$VENV_DIR" ]; then
+    python3 -m venv "$VENV_DIR"
+    echo "  ✔ venv created"
+else
+    echo "  ✔ venv already exists"
+fi
+
+# --- Step 4: Activate virtual environment ---
+echo "[4/8] Activating virtual environment..."
+source "$VENV_DIR/bin/activate"
+
+# --- Step 5: Upgrade pip ---
+echo "[5/8] Upgrading pip..."
+pip install --upgrade pip
+
+# --- Step 6: Install dependencies ---
+echo "[6/8] Installing Python dependencies..."
+
+pip install \
+    pyinstaller \
+    RPi.GPIO \
+    adafruit-circuitpython-ssd1306 \
+    adafruit-blinka \
+    Pillow \
+    python-can \
+    can-isotp \
+    udsoncan
+
+echo ""
+echo "[7/8] Setting up project structure..."
+cd "$PROJECT_DIR"
+
+# Ensure drivers folder has __init__.py
+touch drivers/__init__.py
+
+# Clean old builds (optional but recommended)
+rm -rf build dist *.spec
+
+# --- Step 8: Run PyInstaller ---
+echo "[8/8] Building executable with PyInstaller..."
+echo "      This may take a few minutes..."
+echo ""
+
+pyinstaller \
+    --onefile \
+    --name "$APP_NAME" \
+    --add-data "config.json:." \
+    --add-data "drivers:drivers" \
+    --hidden-import RPi \
+    --hidden-import RPi.GPIO \
+    --hidden-import board \
+    --hidden-import busio \
+    --hidden-import adafruit_ssd1306 \
+    --hidden-import PIL \
+    --hidden-import PIL.Image \
+    --hidden-import PIL.ImageDraw \
+    --hidden-import PIL.ImageFont \
+    --hidden-import can \
+    --hidden-import can.interfaces.socketcan \
+    --hidden-import can.io.asc \
+    --hidden-import isotp \
+    --hidden-import udsoncan \
+    --hidden-import udsoncan.client \
+    --hidden-import udsoncan.connections \
+    --hidden-import udsoncan.configs \
+    --hidden-import udsoncan.services \
+    --hidden-import drivers \
+    --hidden-import drivers.config_loader \
+    --hidden-import drivers.oled_display \
+    --hidden-import drivers.button_input \
+    --hidden-import drivers.uds_client \
+    --hidden-import drivers.transfer_file \
+    --hidden-import drivers.Parse_handler \
+    --hidden-import drivers.can_logger \
+    --hidden-import drivers.report_generator \
+    main.py
+
+# --- Done ---
+echo ""
+echo "=============================================="
+echo "  Build complete!"
+echo "=============================================="
+echo ""
+
+if [ -f "$OUTPUT_DIR/$APP_NAME" ]; then
+    echo "  ✅ Executable created:"
+    echo "     $OUTPUT_DIR/$APP_NAME"
+    echo ""
+    echo "  File size: $(du -sh "$OUTPUT_DIR/$APP_NAME" | cut -f1)"
+    echo ""
+    echo "  To run:"
+    echo "     sudo $OUTPUT_DIR/$APP_NAME"
+else
+    echo "  ❌ Build failed - executable not found in dist/"
+    exit 1
+fi
+
+# Deactivate venv
+deactivate
