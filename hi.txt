@@ -1,6 +1,6 @@
 #!/bin/bash
 # ============================================================
-#  UDS Diagnostics - Raspberry Pi Build Script (with venv)
+#  UDS Diagnostics - Raspberry Pi Build Script (FAST VERSION)
 # ============================================================
 
 set -e
@@ -12,68 +12,77 @@ VENV_DIR="$PROJECT_DIR/venv"
 
 echo ""
 echo "=============================================="
-echo "  UDS Diagnostics - Raspberry Pi Build Tool"
+echo "  UDS Diagnostics - Fast Build Tool"
 echo "=============================================="
 echo ""
 
-# --- Step 1: Check Python version ---
-echo "[1/8] Checking Python..."
-python3 --version || { echo "ERROR: python3 not found. Install it with: sudo apt install python3"; exit 1; }
+# --- Step 1: Check Python ---
+echo "[1/7] Checking Python..."
+python3 --version || { echo "ERROR: Install python3"; exit 1; }
 
-# --- Step 2: Install pip if missing ---
-echo "[2/8] Checking pip..."
+# --- Step 2: Ensure pip + venv ---
+echo "[2/7] Checking pip & venv..."
 python3 -m pip --version 2>/dev/null || {
-    echo "pip not found, installing..."
+    echo "Installing pip & venv..."
     sudo apt-get update
     sudo apt-get install -y python3-pip python3-venv
 }
 
-# --- Step 3: Create virtual environment ---
-echo "[3/8] Creating virtual environment..."
+# --- Step 3: Create venv (only once) ---
+echo "[3/7] Setting up virtual environment..."
 if [ ! -d "$VENV_DIR" ]; then
     python3 -m venv "$VENV_DIR"
     echo "  ✔ venv created"
 else
-    echo "  ✔ venv already exists"
+    echo "  ✔ venv exists (skipping)"
 fi
 
-# --- Step 4: Activate virtual environment ---
-echo "[4/8] Activating virtual environment..."
+# --- Step 4: Activate venv ---
+echo "[4/7] Activating venv..."
 source "$VENV_DIR/bin/activate"
 
-# --- Step 5: Upgrade pip ---
-echo "[5/8] Upgrading pip..."
-pip install --upgrade pip
+# --- Step 5: Install dependencies (ONLY FIRST TIME) ---
+echo "[5/7] Checking dependencies..."
+if [ ! -f "$VENV_DIR/.deps_installed" ]; then
+    echo "  Installing dependencies (first run)..."
+    
+    pip install --upgrade pip
 
-# --- Step 6: Install dependencies ---
-echo "[6/8] Installing Python dependencies..."
+    pip install \
+        pyinstaller \
+        RPi.GPIO \
+        adafruit-circuitpython-ssd1306 \
+        adafruit-blinka \
+        Pillow \
+        python-can \
+        can-isotp \
+        udsoncan
 
-pip install \
-    pyinstaller \
-    RPi.GPIO \
-    adafruit-circuitpython-ssd1306 \
-    adafruit-blinka \
-    Pillow \
-    python-can \
-    can-isotp \
-    udsoncan
+    touch "$VENV_DIR/.deps_installed"
+else
+    echo "  ✔ Dependencies already installed (fast mode)"
+fi
 
-echo ""
-echo "[7/8] Setting up project structure..."
+# --- Step 6: Prepare project ---
+echo "[6/7] Preparing project..."
 cd "$PROJECT_DIR"
 
-# Ensure drivers folder has __init__.py
+# Ensure package structure
 touch drivers/__init__.py
 
-# Clean old builds (optional but recommended)
-rm -rf build dist *.spec
+# Optional clean mode
+if [ "$1" == "clean" ]; then
+    echo "  Cleaning old build..."
+    rm -rf build dist *.spec
+fi
 
-# --- Step 8: Run PyInstaller ---
-echo "[8/8] Building executable with PyInstaller..."
-echo "      This may take a few minutes..."
+# --- Step 7: Build executable ---
+echo "[7/7] Building executable..."
+echo "      (Fast rebuild enabled)"
 echo ""
 
 pyinstaller \
+    --noconfirm \
     --onefile \
     --name "$APP_NAME" \
     --add-data "config.json:." \
@@ -118,12 +127,12 @@ if [ -f "$OUTPUT_DIR/$APP_NAME" ]; then
     echo "  ✅ Executable created:"
     echo "     $OUTPUT_DIR/$APP_NAME"
     echo ""
-    echo "  File size: $(du -sh "$OUTPUT_DIR/$APP_NAME" | cut -f1)"
+    echo "  Size: $(du -sh "$OUTPUT_DIR/$APP_NAME" | cut -f1)"
     echo ""
-    echo "  To run:"
+    echo "  Run with:"
     echo "     sudo $OUTPUT_DIR/$APP_NAME"
 else
-    echo "  ❌ Build failed - executable not found in dist/"
+    echo "  ❌ Build failed"
     exit 1
 fi
 
