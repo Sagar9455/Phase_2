@@ -1,0 +1,37 @@
+Step1 : Create Repo as ecu_jobs
+
+step2 : create structure
+ecu_repo
+-input
+-output
+-jobs
+
+step3 : create file inside jobs as jobs.json
+paste this in jobs.json
+{
+    "selected_testcase": "testcase.txt",
+    "status": "pending"
+}
+Save:
+CTRL + O
+ENTER
+CTRL + X
+
+Step4 : add testcase file
+ecu_jobs/input/testcase.txt
+
+Step 5: Verify config.json
+Important section:
+"git": {
+    "enabled": true,
+    "repo_path": "./ecu_jobs",
+    "branch": "main",
+    "auto_pull": true,
+    "auto_push": true
+}
+
+Step6 : Build EXE
+chmod +x build_on_pi.sh
+./build_on_pi.sh
+step 7 : Run application
+./dist/uds_disgnostics
