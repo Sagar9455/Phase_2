@@ -1,0 +1,1345 @@
+2026-05-18 10:04:00,091 [INFO] ----------------------------------Welcome to Diagnostics-----------------------------------------------
+2026-05-18 10:04:02,092 [INFO] ----------------------------------Initializing-----------------------------------------------
+2026-05-18 10:04:03,593 [INFO] ----------------------------------Waiting for CAN-----------------------------------------------
+2026-05-18 10:04:03,617 [INFO] Bringing up CAN interface can0...
+2026-05-18 10:04:03,849 [INFO] CAN interface can0 successfully brought up.
+2026-05-18 10:04:04,850 [INFO] Creating temporary UDS client...
+2026-05-18 10:04:04,857 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-18 10:04:04,888 [INFO] Created a socket
+2026-05-18 10:04:04,889 [DEBUG] Binding socket to channel=can0
+2026-05-18 10:04:04,891 [DEBUG] Bound socket.
+2026-05-18 10:04:04,895 [DEBUG] Given rxfn is considered blocking
+2026-05-18 10:04:04,903 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-18 10:04:04,905 [INFO] Created a socket
+2026-05-18 10:04:04,906 [DEBUG] Binding socket to channel=can0
+2026-05-18 10:04:04,908 [DEBUG] Bound socket.
+2026-05-18 10:04:04,912 [DEBUG] Given rxfn is considered blocking
+2026-05-18 10:04:04,916 [INFO] CANLogger: Logging only UDS traffic (tx/rx physical+functional)
+2026-05-18 10:04:04,918 [INFO] Trying basic communication with ECU...
+2026-05-18 10:04:04,920 [DEBUG] Starting CanStack
+2026-05-18 10:04:04,923 [DEBUG] Main thread has started
+2026-05-18 10:04:04,925 [DEBUG] Relay thread has started
+2026-05-18 10:04:04,927 [INFO] Connection opened
+2026-05-18 10:04:04,930 [INFO] TesterPresent<0x3e> - Sending TesterPresent request
+2026-05-18 10:04:04,935 [DEBUG] Sending request to server
+2026-05-18 10:04:04,936 [DEBUG] Sending 2 bytes : [3e00]
+2026-05-18 10:04:04,938 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:04,939 [DEBUG] Waiting for server response
+2026-05-18 10:04:04,940 [DEBUG] Tx: <706> (08) [ ]	 023e000000000000
+2026-05-18 10:04:04,942 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:04,943 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 3e 00 00 00 00 00 00
+2026-05-18 10:04:05,091 [DEBUG] No data received: [TimeoutException] - Did not receive IsoTP frame from the Transport layer in time (timeout=0.15 sec) 
+2026-05-18 10:04:05,092 [ERROR] [TimeoutException] : Did not receive response in time. P2 timeout time has expired (timeout=0.150 sec)
+2026-05-18 10:04:05,093 [DEBUG] Stopping CanStack
+2026-05-18 10:04:05,093 [DEBUG] Main thread is exiting
+2026-05-18 10:04:05,112 [DEBUG] CanStack Stopped
+2026-05-18 10:04:05,113 [INFO] Connection closed
+2026-05-18 10:04:05,115 [WARNING] Tester Present failed: Did not receive response in time. P2 timeout time has expired (timeout=0.150 sec)
+2026-05-18 10:04:05,116 [WARNING] No response from ECU.
+2026-05-18 10:04:05,117 [INFO] ----------------------------------Waiting for ECU-----------------------------------------------
+2026-05-18 10:04:07,129 [INFO] Bringing up CAN interface can0...
+2026-05-18 10:04:07,341 [INFO] CAN interface can0 successfully brought up.
+2026-05-18 10:04:08,342 [INFO] Creating temporary UDS client...
+2026-05-18 10:04:08,346 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-18 10:04:08,347 [INFO] Created a socket
+2026-05-18 10:04:08,348 [DEBUG] Binding socket to channel=can0
+2026-05-18 10:04:08,349 [DEBUG] Bound socket.
+2026-05-18 10:04:08,353 [DEBUG] Given rxfn is considered blocking
+2026-05-18 10:04:08,361 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-18 10:04:08,364 [INFO] Created a socket
+2026-05-18 10:04:08,365 [DEBUG] Binding socket to channel=can0
+2026-05-18 10:04:08,366 [DEBUG] Bound socket.
+2026-05-18 10:04:08,370 [DEBUG] Given rxfn is considered blocking
+2026-05-18 10:04:08,377 [INFO] CANLogger: Logging only UDS traffic (tx/rx physical+functional)
+2026-05-18 10:04:08,378 [INFO] Trying basic communication with ECU...
+2026-05-18 10:04:08,379 [DEBUG] Starting CanStack
+2026-05-18 10:04:08,381 [DEBUG] Main thread has started
+2026-05-18 10:04:08,382 [DEBUG] Relay thread has started
+2026-05-18 10:04:08,384 [INFO] Connection opened
+2026-05-18 10:04:08,385 [INFO] TesterPresent<0x3e> - Sending TesterPresent request
+2026-05-18 10:04:08,387 [DEBUG] Sending request to server
+2026-05-18 10:04:08,388 [DEBUG] Sending 2 bytes : [3e00]
+2026-05-18 10:04:08,389 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:08,390 [DEBUG] Waiting for server response
+2026-05-18 10:04:08,391 [DEBUG] Tx: <706> (08) [ ]	 023e000000000000
+2026-05-18 10:04:08,393 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:08,395 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 3e 00 00 00 00 00 00
+2026-05-18 10:04:08,413 [DEBUG] Rx: <70E> (08) [p]	 027e00aaaaaaaaaa
+2026-05-18 10:04:08,415 [DEBUG] Received 2 bytes : [7e00]
+2026-05-18 10:04:08,418 [DEBUG] Received response from server
+2026-05-18 10:04:08,420 [INFO] Received positive response for service TesterPresent (0x3e) from server.
+2026-05-18 10:04:08,421 [DEBUG] Stopping CanStack
+2026-05-18 10:04:08,423 [DEBUG] Main thread is exiting
+2026-05-18 10:04:08,463 [DEBUG] CanStack Stopped
+2026-05-18 10:04:08,465 [INFO] Connection closed
+2026-05-18 10:04:08,467 [INFO] UDS communication successful.
+2026-05-18 10:04:08,468 [INFO] ----------------------------------ECU Ready-----------------------------------------------
+2026-05-18 10:04:08,473 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-18 10:04:08,476 [INFO] Created a socket
+2026-05-18 10:04:08,479 [DEBUG] Binding socket to channel=can0
+2026-05-18 10:04:08,480 [DEBUG] Bound socket.
+2026-05-18 10:04:08,483 [DEBUG] Given rxfn is considered blocking
+2026-05-18 10:04:08,489 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-18 10:04:08,491 [INFO] Created a socket
+2026-05-18 10:04:08,492 [DEBUG] Binding socket to channel=can0
+2026-05-18 10:04:08,493 [DEBUG] Bound socket.
+2026-05-18 10:04:08,498 [DEBUG] Given rxfn is considered blocking
+2026-05-18 10:04:08,501 [INFO] CANLogger: Logging only UDS traffic (tx/rx physical+functional)
+2026-05-18 10:04:08,502 [INFO] USBTransfer initialized
+2026-05-18 10:04:10,601 [INFO] ----------------------------------Run Test Cases-----------------------------------------------
+2026-05-18 10:04:10,602 [INFO] ----------------------------------Storage OK Free: 22033 MB-----------------------------------------------
+2026-05-18 10:04:13,109 [DEBUG] Starting CanStack
+2026-05-18 10:04:13,110 [DEBUG] Main thread has started
+2026-05-18 10:04:13,111 [DEBUG] Relay thread has started
+2026-05-18 10:04:13,113 [INFO] Connection opened
+2026-05-18 10:04:13,115 [INFO] DiagnosticSessionControl<0x10> - Switching session to defaultSession (0x01)
+2026-05-18 10:04:13,117 [DEBUG] Sending request to server
+2026-05-18 10:04:13,119 [DEBUG] Sending 2 bytes : [1001]
+2026-05-18 10:04:13,120 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:13,122 [DEBUG] Waiting for server response
+2026-05-18 10:04:13,123 [DEBUG] Tx: <706> (08) [ ]	 0210010000000000
+2026-05-18 10:04:13,125 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:13,126 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 10 01 00 00 00 00 00
+2026-05-18 10:04:13,157 [DEBUG] Rx: <70E> (08) [p]	 065001003201f4aa
+2026-05-18 10:04:13,159 [DEBUG] Received 6 bytes : [5001003201f4]
+2026-05-18 10:04:13,161 [DEBUG] Received response from server
+2026-05-18 10:04:13,162 [INFO] Received positive response for service DiagnosticSessionControl (0x10) from server.
+2026-05-18 10:04:13,365 [INFO] DiagnosticSessionControl<0x10> - Switching session to extendedDiagnosticSession (0x03)
+2026-05-18 10:04:13,365 [DEBUG] Sending request to server
+2026-05-18 10:04:13,366 [DEBUG] Sending 2 bytes : [1003]
+2026-05-18 10:04:13,367 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:13,368 [DEBUG] Waiting for server response
+2026-05-18 10:04:13,369 [DEBUG] Tx: <706> (08) [ ]	 0210030000000000
+2026-05-18 10:04:13,370 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:13,371 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 10 03 00 00 00 00 00
+2026-05-18 10:04:13,395 [DEBUG] Rx: <70E> (08) [p]	 065003003201f4aa
+2026-05-18 10:04:13,397 [DEBUG] Received 6 bytes : [5003003201f4]
+2026-05-18 10:04:13,399 [DEBUG] Received response from server
+2026-05-18 10:04:13,400 [INFO] Received positive response for service DiagnosticSessionControl (0x10) from server.
+2026-05-18 10:04:13,601 [INFO] [ECU Info] Processing ECU_INFO-1
+2026-05-18 10:04:13,602 [DEBUG] [ECU Info] Step=('ECU_INFO-1', 'S/W Version', '0x22', '0xF1DD', '10 0A 62 F1 DD 32 35 41 31 30 30 30', '', 'physical')
+2026-05-18 10:04:13,602 [INFO] [ECU Info] Sending raw request: 22f1dd
+2026-05-18 10:04:13,603 [DEBUG] Sending 3 bytes : [22f1dd]
+2026-05-18 10:04:13,604 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:13,605 [DEBUG] Tx: <706> (08) [ ]	 0322f1dd00000000
+2026-05-18 10:04:13,605 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:13,606 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 dd 00 00 00 00
+2026-05-18 10:04:13,625 [DEBUG] Rx: <70E> (08) [p]	 100a62f1dd323541
+2026-05-18 10:04:13,627 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:13,628 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:13,628 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:13,634 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:13,635 [DEBUG] Rx: <70E> (08) [p]	 2131303030aaaaaa
+2026-05-18 10:04:13,636 [DEBUG] Received 10 bytes : [62f1dd32354131303030]
+2026-05-18 10:04:13,637 [DEBUG] [ECU Info] Received raw payload: [98, 241, 221, 50, 53, 65, 49, 48, 48, 48]
+2026-05-18 10:04:13,638 [INFO] ----------------------------------[ECU Info] S/W Version (0xF1DD) = 25A1000-----------------------------------------------
+2026-05-18 10:04:13,687 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:13,740 [INFO] [ECU Info] Processing ECU_INFO-2
+2026-05-18 10:04:13,743 [DEBUG] [ECU Info] Step=('ECU_INFO-2', 'B-CAN Version', '0x22', '0xF100', '06 62 F1 00 25 02 01 AA', '', 'physical')
+2026-05-18 10:04:13,744 [INFO] [ECU Info] Sending raw request: 22f100
+2026-05-18 10:04:13,745 [DEBUG] Sending 3 bytes : [22f100]
+2026-05-18 10:04:13,745 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:13,746 [DEBUG] Tx: <706> (08) [ ]	 0322f10000000000
+2026-05-18 10:04:13,747 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:13,748 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 00 00 00 00 00
+2026-05-18 10:04:13,775 [DEBUG] Rx: <70E> (08) [p]	 037f2231aaaaaaaa
+2026-05-18 10:04:13,777 [DEBUG] Received 3 bytes : [7f2231]
+2026-05-18 10:04:13,778 [DEBUG] [ECU Info] Received raw payload: [127, 34, 49]
+2026-05-18 10:04:13,779 [ERROR] ----------------------------------[ECU Info] B-CAN Version - Exception: Unexpected response: [127, 34, 49]----------------------------------
+2026-05-18 10:04:13,880 [INFO] [ECU Info] Processing ECU_INFO-3
+2026-05-18 10:04:13,881 [DEBUG] [ECU Info] Step=('ECU_INFO-3', 'Manufacturing Date', '0x22', '0xF18B', '07 62 F1 8B 20 25 09 20', '', 'physical')
+2026-05-18 10:04:13,881 [INFO] [ECU Info] Sending raw request: 22f18b
+2026-05-18 10:04:13,882 [DEBUG] Sending 3 bytes : [22f18b]
+2026-05-18 10:04:13,882 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:13,884 [DEBUG] Tx: <706> (08) [ ]	 0322f18b00000000
+2026-05-18 10:04:13,885 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:13,885 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 8b 00 00 00 00
+2026-05-18 10:04:13,905 [DEBUG] Rx: <70E> (08) [p]	 0762f18b20250920
+2026-05-18 10:04:13,907 [DEBUG] Received 7 bytes : [62f18b20250920]
+2026-05-18 10:04:13,908 [DEBUG] [ECU Info] Received raw payload: [98, 241, 139, 32, 37, 9, 32]
+2026-05-18 10:04:13,911 [INFO] ----------------------------------[ECU Info] Manufacturing Date (0xF18B) = %-----------------------------------------------
+2026-05-18 10:04:14,013 [INFO] [ECU Info] Processing ECU_INFO-4
+2026-05-18 10:04:14,014 [DEBUG] [ECU Info] Step=('ECU_INFO-4', 'ECU_Serial Number', '0x22', '0xF18C', '10 23 62 F1 8C 30 30 30 30 30 30 30 30 33 31 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 AA AA AA AA AA AA', '', 'physical')
+2026-05-18 10:04:14,015 [INFO] [ECU Info] Sending raw request: 22f18c
+2026-05-18 10:04:14,016 [DEBUG] Sending 3 bytes : [22f18c]
+2026-05-18 10:04:14,016 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:14,018 [DEBUG] Tx: <706> (08) [ ]	 0322f18c00000000
+2026-05-18 10:04:14,019 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,020 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 8c 00 00 00 00
+2026-05-18 10:04:14,045 [DEBUG] Rx: <70E> (08) [p]	 100d62f18c303030
+2026-05-18 10:04:14,047 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:14,047 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,048 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:14,049 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:14,055 [DEBUG] Rx: <70E> (08) [p]	 2130303030303134
+2026-05-18 10:04:14,056 [DEBUG] Received 13 bytes : [62f18c30303030303030303134]
+2026-05-18 10:04:14,057 [DEBUG] [ECU Info] Received raw payload: [98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52]
+2026-05-18 10:04:14,058 [INFO] ----------------------------------[ECU Info] ECU_Serial Number (0xF18C) = 0000000014-----------------------------------------------
+2026-05-18 10:04:14,106 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:14,159 [INFO] [ECU Info] Processing ECU_INFO-5
+2026-05-18 10:04:14,160 [DEBUG] [ECU Info] Step=('ECU_INFO-5', 'H/W Version', '0x22', '0xF193', '10 08 62 F1 93 30 31 2E 30 30 AA AA AA AA AA', '', 'physical')
+2026-05-18 10:04:14,160 [INFO] [ECU Info] Sending raw request: 22f193
+2026-05-18 10:04:14,161 [DEBUG] Sending 3 bytes : [22f193]
+2026-05-18 10:04:14,161 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:14,163 [DEBUG] Tx: <706> (08) [ ]	 0322f19300000000
+2026-05-18 10:04:14,164 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,166 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 93 00 00 00 00
+2026-05-18 10:04:14,185 [DEBUG] Rx: <70E> (08) [p]	 0762f193442e3030
+2026-05-18 10:04:14,187 [DEBUG] Received 7 bytes : [62f193442e3030]
+2026-05-18 10:04:14,188 [DEBUG] [ECU Info] Received raw payload: [98, 241, 147, 68, 46, 48, 48]
+2026-05-18 10:04:14,190 [INFO] ----------------------------------[ECU Info] H/W Version (0xF193) = D.00-----------------------------------------------
+2026-05-18 10:04:14,292 [DEBUG] Stopping CanStack
+2026-05-18 10:04:14,293 [DEBUG] Main thread is exiting
+2026-05-18 10:04:14,336 [DEBUG] CanStack Stopped
+2026-05-18 10:04:14,338 [INFO] Connection closed
+2026-05-18 10:04:14,356 [DEBUG] can config: {'can_filters': [{'can_id': 1798, 'can_mask': 2047, 'extended': False}, {'can_id': 1806, 'can_mask': 2047, 'extended': False}, {'can_id': 0, 'can_mask': 2047, 'extended': False}, {'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'fd': True, 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-18 10:04:14,358 [INFO] Created a socket
+2026-05-18 10:04:14,359 [DEBUG] Binding socket to channel=can0
+2026-05-18 10:04:14,361 [DEBUG] Bound socket.
+2026-05-18 10:04:14,365 [INFO] CAN logging started: /home/mobase/Single_Exe/Project/dist/output/can_logs/CANLog_Testcase_20260518_100414.asc
+2026-05-18 10:04:14,371 [INFO] Running Test Case: ECU_INFO-1
+2026-05-18 10:04:14,375 [DEBUG] Starting CanStack
+2026-05-18 10:04:14,376 [DEBUG] Main thread has started
+2026-05-18 10:04:14,377 [DEBUG] Relay thread has started
+2026-05-18 10:04:14,380 [INFO] Connection opened
+2026-05-18 10:04:14,381 [INFO] Switched to physical mode for TC: ECU_INFO-1 Step: S/W Version
+2026-05-18 10:04:14,381 [INFO] ECU_INFO-1 - S/W Version: SID=0x22, Sub=0xF1DD, Expected=[16, 10, 98, 241, 221, 50, 53, 65, 49, 48, 48, 48]
+2026-05-18 10:04:14,382 [DEBUG] Sending 3 bytes : [22f1dd]
+2026-05-18 10:04:14,383 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:14,385 [DEBUG] Tx: <706> (08) [ ]	 0322f1dd00000000
+2026-05-18 10:04:14,386 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,387 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 dd 00 00 00 00
+2026-05-18 10:04:14,416 [DEBUG] Rx: <70E> (08) [p]	 100a62f1dd323541
+2026-05-18 10:04:14,418 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:14,419 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,420 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:14,422 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:14,429 [DEBUG] Rx: <70E> (08) [p]	 2131303030aaaaaa
+2026-05-18 10:04:14,430 [DEBUG] Received 10 bytes : [62f1dd32354131303030]
+2026-05-18 10:04:14,481 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:14,482 [DEBUG] ECU_INFO-1 S/W Version -> Received payload: [98, 241, 221, 50, 53, 65, 49, 48, 48, 48]
+2026-05-18 10:04:14,483 [WARNING] -----------------------------------------------ECU_INFO-1 S/W Version -> FAIL - Expected [16, 10, 98, 241, 221, 50, 53, 65, 49, 48, 48, 48], got [98, 241, 221, 50, 53, 65, 49, 48, 48, 48]-----------------------------------------------
+2026-05-18 10:04:14,484 [DEBUG] Stopping CanStack
+2026-05-18 10:04:14,485 [DEBUG] Main thread is exiting
+2026-05-18 10:04:14,528 [DEBUG] CanStack Stopped
+2026-05-18 10:04:14,529 [INFO] Connection closed
+2026-05-18 10:04:14,530 [INFO] Running Test Case: ECU_INFO-2
+2026-05-18 10:04:14,530 [DEBUG] Starting CanStack
+2026-05-18 10:04:14,532 [DEBUG] Main thread has started
+2026-05-18 10:04:14,533 [DEBUG] Relay thread has started
+2026-05-18 10:04:14,535 [INFO] Connection opened
+2026-05-18 10:04:14,536 [INFO] Switched to physical mode for TC: ECU_INFO-2 Step: B-CAN Version
+2026-05-18 10:04:14,536 [INFO] ECU_INFO-2 - B-CAN Version: SID=0x22, Sub=0xF100, Expected=[6, 98, 241, 0, 37, 2, 1, 170]
+2026-05-18 10:04:14,537 [DEBUG] Sending 3 bytes : [22f100]
+2026-05-18 10:04:14,538 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:14,540 [DEBUG] Tx: <706> (08) [ ]	 0322f10000000000
+2026-05-18 10:04:14,541 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,542 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 00 00 00 00 00
+2026-05-18 10:04:14,568 [DEBUG] Rx: <70E> (08) [p]	 037f2231aaaaaaaa
+2026-05-18 10:04:14,573 [DEBUG] Received 3 bytes : [7f2231]
+2026-05-18 10:04:14,625 [DEBUG] ECU_INFO-2 B-CAN Version -> Received payload: [127, 34, 49]
+2026-05-18 10:04:14,626 [WARNING] -----------------------------------------------ECU_INFO-2 B-CAN Version -> FAIL - Expected Positive Response, but got NRC: 0x31-----------------------------------------------
+2026-05-18 10:04:14,627 [DEBUG] Stopping CanStack
+2026-05-18 10:04:14,631 [DEBUG] Main thread is exiting
+2026-05-18 10:04:14,670 [DEBUG] CanStack Stopped
+2026-05-18 10:04:14,671 [INFO] Connection closed
+2026-05-18 10:04:14,672 [INFO] Running Test Case: ECU_INFO-3
+2026-05-18 10:04:14,672 [DEBUG] Starting CanStack
+2026-05-18 10:04:14,674 [DEBUG] Main thread has started
+2026-05-18 10:04:14,675 [DEBUG] Relay thread has started
+2026-05-18 10:04:14,681 [INFO] Connection opened
+2026-05-18 10:04:14,682 [INFO] Switched to physical mode for TC: ECU_INFO-3 Step: Manufacturing Date
+2026-05-18 10:04:14,683 [INFO] ECU_INFO-3 - Manufacturing Date: SID=0x22, Sub=0xF18B, Expected=[7, 98, 241, 139, 32, 37, 9, 32]
+2026-05-18 10:04:14,684 [DEBUG] Sending 3 bytes : [22f18b]
+2026-05-18 10:04:14,684 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:14,686 [DEBUG] Tx: <706> (08) [ ]	 0322f18b00000000
+2026-05-18 10:04:14,687 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,687 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 8b 00 00 00 00
+2026-05-18 10:04:14,706 [DEBUG] Rx: <70E> (08) [p]	 0762f18b20250920
+2026-05-18 10:04:14,708 [DEBUG] Received 7 bytes : [62f18b20250920]
+2026-05-18 10:04:14,759 [DEBUG] ECU_INFO-3 Manufacturing Date -> Received payload: [98, 241, 139, 32, 37, 9, 32]
+2026-05-18 10:04:14,761 [WARNING] -----------------------------------------------ECU_INFO-3 Manufacturing Date -> FAIL - Expected [7, 98, 241, 139, 32, 37, 9, 32], got [98, 241, 139, 32, 37, 9, 32]-----------------------------------------------
+2026-05-18 10:04:14,762 [DEBUG] Stopping CanStack
+2026-05-18 10:04:14,764 [DEBUG] Main thread is exiting
+2026-05-18 10:04:14,807 [DEBUG] CanStack Stopped
+2026-05-18 10:04:14,809 [INFO] Connection closed
+2026-05-18 10:04:14,810 [INFO] Running Test Case: ECU_INFO-4
+2026-05-18 10:04:14,811 [DEBUG] Starting CanStack
+2026-05-18 10:04:14,813 [DEBUG] Main thread has started
+2026-05-18 10:04:14,815 [DEBUG] Relay thread has started
+2026-05-18 10:04:14,817 [INFO] Connection opened
+2026-05-18 10:04:14,818 [INFO] Switched to physical mode for TC: ECU_INFO-4 Step: ECU_Serial Number
+2026-05-18 10:04:14,819 [INFO] ECU_INFO-4 - ECU_Serial Number: SID=0x22, Sub=0xF18C, Expected=[16, 35, 98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 51, 49, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 170, 170, 170, 170, 170, 170]
+2026-05-18 10:04:14,820 [DEBUG] Sending 3 bytes : [22f18c]
+2026-05-18 10:04:14,825 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:14,826 [DEBUG] Tx: <706> (08) [ ]	 0322f18c00000000
+2026-05-18 10:04:14,827 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,828 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 8c 00 00 00 00
+2026-05-18 10:04:14,856 [DEBUG] Rx: <70E> (08) [p]	 100d62f18c303030
+2026-05-18 10:04:14,858 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:14,860 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,861 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:14,863 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:14,867 [DEBUG] Rx: <70E> (08) [p]	 2130303030303134
+2026-05-18 10:04:14,868 [DEBUG] Received 13 bytes : [62f18c30303030303030303134]
+2026-05-18 10:04:14,920 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:14,922 [DEBUG] ECU_INFO-4 ECU_Serial Number -> Received payload: [98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52]
+2026-05-18 10:04:14,924 [WARNING] -----------------------------------------------ECU_INFO-4 ECU_Serial Number -> FAIL - Expected [16, 35, 98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 51, 49, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 170, 170, 170, 170, 170, 170], got [98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52]-----------------------------------------------
+2026-05-18 10:04:14,925 [DEBUG] Stopping CanStack
+2026-05-18 10:04:14,925 [DEBUG] Main thread is exiting
+2026-05-18 10:04:14,967 [DEBUG] CanStack Stopped
+2026-05-18 10:04:14,969 [INFO] Connection closed
+2026-05-18 10:04:14,973 [INFO] Running Test Case: ECU_INFO-5
+2026-05-18 10:04:14,974 [DEBUG] Starting CanStack
+2026-05-18 10:04:14,975 [DEBUG] Main thread has started
+2026-05-18 10:04:14,976 [DEBUG] Relay thread has started
+2026-05-18 10:04:14,979 [INFO] Connection opened
+2026-05-18 10:04:14,979 [INFO] Switched to physical mode for TC: ECU_INFO-5 Step: H/W Version
+2026-05-18 10:04:14,980 [INFO] ECU_INFO-5 - H/W Version: SID=0x22, Sub=0xF193, Expected=[16, 8, 98, 241, 147, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:14,981 [DEBUG] Sending 3 bytes : [22f193]
+2026-05-18 10:04:14,982 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:14,983 [DEBUG] Tx: <706> (08) [ ]	 0322f19300000000
+2026-05-18 10:04:14,984 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:14,985 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 93 00 00 00 00
+2026-05-18 10:04:15,006 [DEBUG] Rx: <70E> (08) [p]	 0762f193442e3030
+2026-05-18 10:04:15,008 [DEBUG] Received 7 bytes : [62f193442e3030]
+2026-05-18 10:04:15,060 [DEBUG] ECU_INFO-5 H/W Version -> Received payload: [98, 241, 147, 68, 46, 48, 48]
+2026-05-18 10:04:15,061 [WARNING] -----------------------------------------------ECU_INFO-5 H/W Version -> FAIL - Expected [16, 8, 98, 241, 147, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170], got [98, 241, 147, 68, 46, 48, 48]-----------------------------------------------
+2026-05-18 10:04:15,062 [DEBUG] Stopping CanStack
+2026-05-18 10:04:15,064 [DEBUG] Main thread is exiting
+2026-05-18 10:04:15,107 [DEBUG] CanStack Stopped
+2026-05-18 10:04:15,108 [INFO] Connection closed
+2026-05-18 10:04:15,110 [INFO] Running Test Case: TC_ID-001
+2026-05-18 10:04:15,111 [DEBUG] Starting CanStack
+2026-05-18 10:04:15,113 [DEBUG] Main thread has started
+2026-05-18 10:04:15,115 [DEBUG] Relay thread has started
+2026-05-18 10:04:15,117 [INFO] Connection opened
+2026-05-18 10:04:15,118 [INFO] Switched to physical mode for TC: TC_ID-001 Step: Start default session
+2026-05-18 10:04:15,121 [INFO] TC_ID-001 - Start default session: SID=0x10, Sub=0x01, Expected=[6, 80, 1, 0, 50, 1, 244, 170]
+2026-05-18 10:04:15,175 [DEBUG] Sending 2 bytes : [1001]
+2026-05-18 10:04:15,176 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:15,180 [DEBUG] Tx: <706> (08) [ ]	 0210010000000000
+2026-05-18 10:04:15,183 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:15,184 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 10 01 00 00 00 00 00
+2026-05-18 10:04:15,207 [DEBUG] Rx: <70E> (08) [p]	 065001003201f4aa
+2026-05-18 10:04:15,212 [DEBUG] Received 6 bytes : [5001003201f4]
+2026-05-18 10:04:15,214 [DEBUG] TC_ID-001 Start default session -> Received payload: [80, 1, 0, 50, 1, 244]
+2026-05-18 10:04:15,216 [WARNING] -----------------------------------------------TC_ID-001 Start default session -> FAIL - Expected [6, 80, 1, 0, 50, 1, 244, 170], got [80, 1, 0, 50, 1, 244]-----------------------------------------------
+2026-05-18 10:04:15,219 [DEBUG] Stopping CanStack
+2026-05-18 10:04:15,221 [DEBUG] Main thread is exiting
+2026-05-18 10:04:15,258 [DEBUG] CanStack Stopped
+2026-05-18 10:04:15,259 [INFO] Connection closed
+2026-05-18 10:04:15,261 [INFO] Running Test Case: TC_ID-003
+2026-05-18 10:04:15,262 [DEBUG] Starting CanStack
+2026-05-18 10:04:15,263 [DEBUG] Main thread has started
+2026-05-18 10:04:15,264 [DEBUG] Relay thread has started
+2026-05-18 10:04:15,267 [INFO] Connection opened
+2026-05-18 10:04:15,269 [INFO] Switched to physical mode for TC: TC_ID-003 Step: Start Extended session
+2026-05-18 10:04:15,270 [INFO] TC_ID-003 - Start Extended session: SID=0x10, Sub=0x03, Expected=[6, 80, 3, 0, 50, 1, 244, 170]
+2026-05-18 10:04:15,322 [DEBUG] Sending 2 bytes : [1003]
+2026-05-18 10:04:15,323 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:15,325 [DEBUG] Tx: <706> (08) [ ]	 0210030000000000
+2026-05-18 10:04:15,327 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:15,328 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 10 03 00 00 00 00 00
+2026-05-18 10:04:15,356 [DEBUG] Rx: <70E> (08) [p]	 065003003201f4aa
+2026-05-18 10:04:15,358 [DEBUG] Received 6 bytes : [5003003201f4]
+2026-05-18 10:04:15,360 [DEBUG] TC_ID-003 Start Extended session -> Received payload: [80, 3, 0, 50, 1, 244]
+2026-05-18 10:04:15,361 [WARNING] -----------------------------------------------TC_ID-003 Start Extended session -> FAIL - Expected [6, 80, 3, 0, 50, 1, 244, 170], got [80, 3, 0, 50, 1, 244]-----------------------------------------------
+2026-05-18 10:04:15,362 [DEBUG] Stopping CanStack
+2026-05-18 10:04:15,364 [DEBUG] Main thread is exiting
+2026-05-18 10:04:15,407 [DEBUG] CanStack Stopped
+2026-05-18 10:04:15,409 [INFO] Connection closed
+2026-05-18 10:04:15,411 [INFO] Running Test Case: TC_ID-004
+2026-05-18 10:04:15,412 [DEBUG] Starting CanStack
+2026-05-18 10:04:15,414 [DEBUG] Main thread has started
+2026-05-18 10:04:15,415 [DEBUG] Relay thread has started
+2026-05-18 10:04:15,417 [INFO] Connection opened
+2026-05-18 10:04:15,419 [INFO] Switched to physical mode for TC: TC_ID-004 Step: Sub function not supported(10 FF)
+2026-05-18 10:04:15,420 [INFO] TC_ID-004 - Sub function not supported(10 FF): SID=0x10, Sub=0xFF, Expected=[3, 127, 16, 18, 170, 170, 170, 170]
+2026-05-18 10:04:15,472 [DEBUG] Sending 2 bytes : [10ff]
+2026-05-18 10:04:15,474 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:15,477 [DEBUG] Tx: <706> (08) [ ]	 0210ff0000000000
+2026-05-18 10:04:15,478 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:15,479 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 10 ff 00 00 00 00 00
+2026-05-18 10:04:15,496 [DEBUG] Rx: <70E> (08) [p]	 037f1012aaaaaaaa
+2026-05-18 10:04:15,497 [DEBUG] Received 3 bytes : [7f1012]
+2026-05-18 10:04:15,498 [DEBUG] TC_ID-004 Sub function not supported(10 FF) -> Received payload: [127, 16, 18]
+2026-05-18 10:04:15,499 [WARNING] -----------------------------------------------TC_ID-004 Sub function not supported(10 FF) -> FAIL - Expected Positive Response, but got NRC: 0x12-----------------------------------------------
+2026-05-18 10:04:15,500 [DEBUG] Stopping CanStack
+2026-05-18 10:04:15,501 [DEBUG] Main thread is exiting
+2026-05-18 10:04:15,547 [DEBUG] CanStack Stopped
+2026-05-18 10:04:15,551 [INFO] Connection closed
+2026-05-18 10:04:15,552 [INFO] Running Test Case: TC_ID-005
+2026-05-18 10:04:15,557 [DEBUG] Starting CanStack
+2026-05-18 10:04:15,560 [DEBUG] Main thread has started
+2026-05-18 10:04:15,561 [DEBUG] Relay thread has started
+2026-05-18 10:04:15,567 [INFO] Connection opened
+2026-05-18 10:04:15,570 [INFO] Switched to physical mode for TC: TC_ID-005 Step: Incorrect message length(No sub function)(10)
+2026-05-18 10:04:15,574 [INFO] TC_ID-005 - Incorrect message length(No sub function)(10): SID=0x10, Sub=, Expected=[3, 127, 16, 19, 170, 170, 170, 170]
+2026-05-18 10:04:15,577 [INFO] TC_ID-005 - Incorrect message length(No sub function)(10): Sending 10
+2026-05-18 10:04:15,629 [DEBUG] Sending 1 bytes : [10]
+2026-05-18 10:04:15,631 [DEBUG] Enqueuing a SendRequest for 1 bytes and TAT=Physical
+2026-05-18 10:04:15,633 [DEBUG] Tx: <706> (08) [ ]	 0110000000000000
+2026-05-18 10:04:15,634 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:15,635 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    01 10 00 00 00 00 00 00
+2026-05-18 10:04:15,646 [DEBUG] Rx: <70E> (08) [p]	 037f1013aaaaaaaa
+2026-05-18 10:04:15,647 [DEBUG] Received 3 bytes : [7f1013]
+2026-05-18 10:04:15,648 [DEBUG] TC_ID-005 Incorrect message length(No sub function)(10) -> Received payload: [127, 16, 19]
+2026-05-18 10:04:15,649 [WARNING] -----------------------------------------------TC_ID-005 Incorrect message length(No sub function)(10) -> FAIL - Expected Positive Response, but got NRC: 0x13-----------------------------------------------
+2026-05-18 10:04:15,650 [DEBUG] Stopping CanStack
+2026-05-18 10:04:15,652 [DEBUG] Main thread is exiting
+2026-05-18 10:04:15,696 [DEBUG] CanStack Stopped
+2026-05-18 10:04:15,697 [INFO] Connection closed
+2026-05-18 10:04:15,698 [INFO] Running Test Case: TC_ID-007
+2026-05-18 10:04:15,700 [DEBUG] Starting CanStack
+2026-05-18 10:04:15,701 [DEBUG] Main thread has started
+2026-05-18 10:04:15,703 [DEBUG] Relay thread has started
+2026-05-18 10:04:15,705 [INFO] Connection opened
+2026-05-18 10:04:15,706 [INFO] Switched to physical mode for TC: TC_ID-007 Step: Hard reset
+2026-05-18 10:04:15,708 [INFO] TC_ID-007 - Hard reset: SID=0x11, Sub=0x01, Expected=[2, 81, 1, 170, 170, 170, 170, 170]
+2026-05-18 10:04:15,760 [DEBUG] Sending 2 bytes : [1101]
+2026-05-18 10:04:15,761 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:15,763 [DEBUG] Tx: <706> (08) [ ]	 0211010000000000
+2026-05-18 10:04:15,764 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:15,764 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 11 01 00 00 00 00 00
+2026-05-18 10:04:15,775 [DEBUG] Rx: <70E> (08) [p]	 025101aaaaaaaaaa
+2026-05-18 10:04:15,776 [DEBUG] Received 2 bytes : [5101]
+2026-05-18 10:04:16,777 [DEBUG] TC_ID-007 Hard reset -> Received payload: [81, 1]
+2026-05-18 10:04:16,778 [WARNING] -----------------------------------------------TC_ID-007 Hard reset -> FAIL - Expected [2, 81, 1, 170, 170, 170, 170, 170], got [81, 1]-----------------------------------------------
+2026-05-18 10:04:16,779 [DEBUG] Stopping CanStack
+2026-05-18 10:04:16,780 [DEBUG] Main thread is exiting
+2026-05-18 10:04:16,781 [DEBUG] CanStack Stopped
+2026-05-18 10:04:16,782 [INFO] Connection closed
+2026-05-18 10:04:16,783 [INFO] Running Test Case: TC_ID-008
+2026-05-18 10:04:16,784 [DEBUG] Starting CanStack
+2026-05-18 10:04:16,786 [DEBUG] Main thread has started
+2026-05-18 10:04:16,788 [DEBUG] Relay thread has started
+2026-05-18 10:04:16,790 [INFO] Connection opened
+2026-05-18 10:04:16,791 [INFO] Switched to physical mode for TC: TC_ID-008 Step: Soft reset
+2026-05-18 10:04:16,792 [INFO] TC_ID-008 - Soft reset: SID=0x11, Sub=0x03, Expected=[2, 81, 3, 170, 170, 170, 170, 170]
+2026-05-18 10:04:16,844 [DEBUG] Sending 2 bytes : [1103]
+2026-05-18 10:04:16,845 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-18 10:04:16,847 [DEBUG] Tx: <706> (08) [ ]	 0211030000000000
+2026-05-18 10:04:16,849 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:16,850 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 11 03 00 00 00 00 00
+2026-05-18 10:04:16,864 [DEBUG] Rx: <70E> (08) [p]	 025103aaaaaaaaaa
+2026-05-18 10:04:16,866 [DEBUG] Received 2 bytes : [5103]
+2026-05-18 10:04:16,867 [DEBUG] TC_ID-008 Soft reset -> Received payload: [81, 3]
+2026-05-18 10:04:16,868 [WARNING] -----------------------------------------------TC_ID-008 Soft reset -> FAIL - Expected [2, 81, 3, 170, 170, 170, 170, 170], got [81, 3]-----------------------------------------------
+2026-05-18 10:04:16,868 [DEBUG] Stopping CanStack
+2026-05-18 10:04:16,870 [DEBUG] Main thread is exiting
+2026-05-18 10:04:16,914 [DEBUG] CanStack Stopped
+2026-05-18 10:04:16,915 [INFO] Connection closed
+2026-05-18 10:04:16,916 [INFO] Running Test Case: TC_ID-010
+2026-05-18 10:04:16,916 [DEBUG] Starting CanStack
+2026-05-18 10:04:16,918 [DEBUG] Main thread has started
+2026-05-18 10:04:16,923 [DEBUG] Relay thread has started
+2026-05-18 10:04:16,925 [INFO] Connection opened
+2026-05-18 10:04:16,926 [INFO] Switched to physical mode for TC: TC_ID-010 Step: Incorrect message length(No sub function)(11)
+2026-05-18 10:04:16,927 [INFO] TC_ID-010 - Incorrect message length(No sub function)(11): SID=0x11, Sub=, Expected=[3, 127, 17, 19, 170, 170, 170, 170]
+2026-05-18 10:04:16,978 [DEBUG] Sending 1 bytes : [11]
+2026-05-18 10:04:16,979 [DEBUG] Enqueuing a SendRequest for 1 bytes and TAT=Physical
+2026-05-18 10:04:16,981 [DEBUG] Tx: <706> (08) [ ]	 0111000000000000
+2026-05-18 10:04:16,983 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:16,984 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    01 11 00 00 00 00 00 00
+2026-05-18 10:04:18,981 [DEBUG] No data received: [TimeoutException] - Did not receive IsoTP frame from the Transport layer in time (timeout=2 sec) 
+2026-05-18 10:04:18,981 [ERROR] ----------------------------------TC_ID-010 Incorrect message length(No sub function)(11) -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:18,982 [DEBUG] Stopping CanStack
+2026-05-18 10:04:18,983 [DEBUG] Main thread is exiting
+2026-05-18 10:04:19,035 [DEBUG] CanStack Stopped
+2026-05-18 10:04:19,036 [INFO] Connection closed
+2026-05-18 10:04:19,039 [INFO] Running Test Case: TC_ID-033
+2026-05-18 10:04:19,040 [DEBUG] Starting CanStack
+2026-05-18 10:04:19,042 [DEBUG] Main thread has started
+2026-05-18 10:04:19,044 [DEBUG] Relay thread has started
+2026-05-18 10:04:19,047 [INFO] Connection opened
+2026-05-18 10:04:19,048 [INFO] Switched to physical mode for TC: TC_ID-033 Step: PreCondition: PC_ID-003  Testcase:Read DTC with Extended session(19 01)
+2026-05-18 10:04:19,049 [INFO] TC_ID-033 - PreCondition: PC_ID-003  Testcase:Read DTC with Extended session(19 01): SID=0x19, Sub=0x01, Expected=[6, 89, 1, 8, 0, 0, 0]
+2026-05-18 10:04:19,050 [DEBUG] Sending 3 bytes : [1901ff]
+2026-05-18 10:04:19,052 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:19,053 [DEBUG] Tx: <706> (08) [ ]	 031901ff00000000
+2026-05-18 10:04:19,054 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:19,055 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 19 01 ff 00 00 00 00
+2026-05-18 10:04:19,069 [DEBUG] Rx: <70E> (08) [p]	 037f1931aaaaaaaa
+2026-05-18 10:04:19,070 [DEBUG] Received 3 bytes : [7f1931]
+2026-05-18 10:04:19,071 [ERROR] ----------------------------------TC_ID-033 PreCondition: PC_ID-003  Testcase:Read DTC with Extended session(19 01) -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:19,072 [DEBUG] Stopping CanStack
+2026-05-18 10:04:19,073 [DEBUG] Main thread is exiting
+2026-05-18 10:04:19,120 [DEBUG] CanStack Stopped
+2026-05-18 10:04:19,121 [INFO] Connection closed
+2026-05-18 10:04:19,122 [INFO] Running Test Case: TC_ID-034
+2026-05-18 10:04:19,123 [DEBUG] Starting CanStack
+2026-05-18 10:04:19,125 [DEBUG] Main thread has started
+2026-05-18 10:04:19,127 [DEBUG] Relay thread has started
+2026-05-18 10:04:19,129 [INFO] Connection opened
+2026-05-18 10:04:19,131 [INFO] Switched to physical mode for TC: TC_ID-034 Step: PreCondition: PC_ID-003  Testcase:Read DTC Extended session(19 02)
+2026-05-18 10:04:19,132 [INFO] TC_ID-034 - PreCondition: PC_ID-003  Testcase:Read DTC Extended session(19 02): SID=0x19, Sub=0x02, Expected=[3, 89, 2, 9]
+2026-05-18 10:04:19,132 [DEBUG] Sending 3 bytes : [1902ff]
+2026-05-18 10:04:19,133 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:19,135 [DEBUG] Tx: <706> (08) [ ]	 031902ff00000000
+2026-05-18 10:04:19,136 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:19,137 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 19 02 ff 00 00 00 00
+2026-05-18 10:04:19,152 [DEBUG] Rx: <70E> (08) [p]	 037f1931aaaaaaaa
+2026-05-18 10:04:19,154 [DEBUG] Received 3 bytes : [7f1931]
+2026-05-18 10:04:19,155 [ERROR] ----------------------------------TC_ID-034 PreCondition: PC_ID-003  Testcase:Read DTC Extended session(19 02) -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:19,156 [DEBUG] Stopping CanStack
+2026-05-18 10:04:19,157 [DEBUG] Main thread is exiting
+2026-05-18 10:04:19,203 [DEBUG] CanStack Stopped
+2026-05-18 10:04:19,204 [INFO] Connection closed
+2026-05-18 10:04:19,205 [INFO] Running Test Case: TC_ID-036
+2026-05-18 10:04:19,205 [DEBUG] Starting CanStack
+2026-05-18 10:04:19,208 [DEBUG] Main thread has started
+2026-05-18 10:04:19,212 [DEBUG] Relay thread has started
+2026-05-18 10:04:19,213 [INFO] Connection opened
+2026-05-18 10:04:19,214 [INFO] Switched to physical mode for TC: TC_ID-036 Step: PreCondition: PC_ID-003  Testcase:Subfunction not supported(No Mask)(19 0F)Subfunction not supported(19 0F 08 )
+2026-05-18 10:04:19,215 [INFO] TC_ID-036 - PreCondition: PC_ID-003  Testcase:Subfunction not supported(No Mask)(19 0F)Subfunction not supported(19 0F 08 ): SID=0x19, Sub=0x0F, Expected=[3, 127, 25, 18, 170, 170, 170, 170]
+2026-05-18 10:04:19,216 [DEBUG] Sending 3 bytes : [190fff]
+2026-05-18 10:04:19,217 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:19,218 [DEBUG] Tx: <706> (08) [ ]	 03190fff00000000
+2026-05-18 10:04:19,219 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:19,220 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 19 0f ff 00 00 00 00
+2026-05-18 10:04:19,230 [DEBUG] Rx: <70E> (08) [p]	 037f1912aaaaaaaa
+2026-05-18 10:04:19,231 [DEBUG] Received 3 bytes : [7f1912]
+2026-05-18 10:04:19,232 [ERROR] ----------------------------------TC_ID-036 PreCondition: PC_ID-003  Testcase:Subfunction not supported(No Mask)(19 0F)Subfunction not supported(19 0F 08 ) -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:19,233 [DEBUG] Stopping CanStack
+2026-05-18 10:04:19,234 [DEBUG] Main thread is exiting
+2026-05-18 10:04:19,280 [DEBUG] CanStack Stopped
+2026-05-18 10:04:19,281 [INFO] Connection closed
+2026-05-18 10:04:19,282 [INFO] Running Test Case: TC_ID-037
+2026-05-18 10:04:19,283 [DEBUG] Starting CanStack
+2026-05-18 10:04:19,285 [DEBUG] Main thread has started
+2026-05-18 10:04:19,287 [DEBUG] Relay thread has started
+2026-05-18 10:04:19,288 [INFO] Connection opened
+2026-05-18 10:04:19,289 [INFO] Switched to physical mode for TC: TC_ID-037 Step: PreCondition: PC_ID-003  Testcase:Subfunction not supported(19 0E)
+2026-05-18 10:04:19,290 [INFO] TC_ID-037 - PreCondition: PC_ID-003  Testcase:Subfunction not supported(19 0E): SID=0x19, Sub=0x0E, Expected=[3, 127, 25, 18, 170, 170, 170, 170]
+2026-05-18 10:04:19,291 [DEBUG] Sending 3 bytes : [190eff]
+2026-05-18 10:04:19,292 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:19,293 [DEBUG] Tx: <706> (08) [ ]	 03190eff00000000
+2026-05-18 10:04:19,294 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:19,295 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 19 0e ff 00 00 00 00
+2026-05-18 10:04:19,310 [DEBUG] Rx: <70E> (08) [p]	 037f1912aaaaaaaa
+2026-05-18 10:04:19,311 [DEBUG] Received 3 bytes : [7f1912]
+2026-05-18 10:04:19,312 [ERROR] ----------------------------------TC_ID-037 PreCondition: PC_ID-003  Testcase:Subfunction not supported(19 0E) -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:19,313 [DEBUG] Stopping CanStack
+2026-05-18 10:04:19,314 [DEBUG] Main thread is exiting
+2026-05-18 10:04:19,360 [DEBUG] CanStack Stopped
+2026-05-18 10:04:19,362 [INFO] Connection closed
+2026-05-18 10:04:19,363 [INFO] Running Test Case: TC_ID-140
+2026-05-18 10:04:19,366 [DEBUG] Starting CanStack
+2026-05-18 10:04:19,370 [DEBUG] Main thread has started
+2026-05-18 10:04:19,371 [DEBUG] Relay thread has started
+2026-05-18 10:04:19,372 [INFO] Connection opened
+2026-05-18 10:04:19,373 [INFO] Switched to physical mode for TC: TC_ID-140 Step: PreCondition: PC_ID-023  Testcase:RX_SWIN_F1_EF_Read(Defaultsession)
+2026-05-18 10:04:19,374 [INFO] TC_ID-140 - PreCondition: PC_ID-023  Testcase:RX_SWIN_F1_EF_Read(Defaultsession): SID=0x22, Sub=0xF1EF, Expected=[16, 43, 98, 241, 239, 7, 6, 11, 82, 49, 48, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 53, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 54, 32, 83, 80, 51, 47, 49, 47, 48]
+2026-05-18 10:04:19,375 [DEBUG] Sending 3 bytes : [22f1ef]
+2026-05-18 10:04:19,376 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:19,378 [DEBUG] Tx: <706> (08) [ ]	 0322f1ef00000000
+2026-05-18 10:04:19,379 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:19,379 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 ef 00 00 00 00
+2026-05-18 10:04:19,400 [DEBUG] Rx: <70E> (08) [p]	 102b62f1ef07060b
+2026-05-18 10:04:19,402 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:19,403 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:19,404 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:19,407 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:19,410 [DEBUG] Rx: <70E> (08) [p]	 2152313020535033
+2026-05-18 10:04:19,514 [DEBUG] Rx: <70E> (08) [p]	 222f312f300c5231
+2026-05-18 10:04:19,619 [DEBUG] Rx: <70E> (08) [p]	 233535205350332f
+2026-05-18 10:04:19,724 [DEBUG] Rx: <70E> (08) [p]	 24312f300c523135
+2026-05-18 10:04:19,829 [DEBUG] Rx: <70E> (08) [p]	 2536205350332f31
+2026-05-18 10:04:19,934 [DEBUG] Rx: <70E> (08) [p]	 262f30aaaaaaaaaa
+2026-05-18 10:04:19,935 [DEBUG] Received 43 bytes : [62f1ef07060b523130205350332f312f300c52313535205350332f312f300c52313536205350332f312f30]
+2026-05-18 10:04:19,985 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:19,986 [DEBUG] TC_ID-140 PreCondition: PC_ID-023  Testcase:RX_SWIN_F1_EF_Read(Defaultsession) -> Received payload: [98, 241, 239, 7, 6, 11, 82, 49, 48, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 53, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 54, 32, 83, 80, 51, 47, 49, 47, 48]
+2026-05-18 10:04:19,988 [WARNING] -----------------------------------------------TC_ID-140 PreCondition: PC_ID-023  Testcase:RX_SWIN_F1_EF_Read(Defaultsession) -> FAIL - Expected [16, 43, 98, 241, 239, 7, 6, 11, 82, 49, 48, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 53, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 54, 32, 83, 80, 51, 47, 49, 47, 48], got [98, 241, 239, 7, 6, 11, 82, 49, 48, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 53, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 54, 32, 83, 80, 51, 47, 49, 47, 48]-----------------------------------------------
+2026-05-18 10:04:19,989 [DEBUG] Stopping CanStack
+2026-05-18 10:04:19,991 [DEBUG] Main thread is exiting
+2026-05-18 10:04:20,034 [DEBUG] CanStack Stopped
+2026-05-18 10:04:20,036 [INFO] Connection closed
+2026-05-18 10:04:20,037 [INFO] Running Test Case: TC_ID-141
+2026-05-18 10:04:20,037 [DEBUG] Starting CanStack
+2026-05-18 10:04:20,039 [DEBUG] Main thread has started
+2026-05-18 10:04:20,040 [DEBUG] Relay thread has started
+2026-05-18 10:04:20,043 [INFO] Connection opened
+2026-05-18 10:04:20,044 [INFO] Switched to physical mode for TC: TC_ID-141 Step: PreCondition: PC_ID-023  Testcase:B_CAN_Database_Version_F1_00_Read(Defaultsession)
+2026-05-18 10:04:20,046 [INFO] TC_ID-141 - PreCondition: PC_ID-023  Testcase:B_CAN_Database_Version_F1_00_Read(Defaultsession): SID=0x22, Sub=0xF100, Expected=[6, 98, 241, 0, 37, 2, 1, 170]
+2026-05-18 10:04:20,047 [DEBUG] Sending 3 bytes : [22f100]
+2026-05-18 10:04:20,049 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:20,051 [DEBUG] Tx: <706> (08) [ ]	 0322f10000000000
+2026-05-18 10:04:20,052 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:20,053 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 00 00 00 00 00
+2026-05-18 10:04:20,082 [DEBUG] Rx: <70E> (08) [p]	 037f2231aaaaaaaa
+2026-05-18 10:04:20,086 [DEBUG] Received 3 bytes : [7f2231]
+2026-05-18 10:04:20,138 [DEBUG] TC_ID-141 PreCondition: PC_ID-023  Testcase:B_CAN_Database_Version_F1_00_Read(Defaultsession) -> Received payload: [127, 34, 49]
+2026-05-18 10:04:20,140 [WARNING] -----------------------------------------------TC_ID-141 PreCondition: PC_ID-023  Testcase:B_CAN_Database_Version_F1_00_Read(Defaultsession) -> FAIL - Expected Positive Response, but got NRC: 0x31-----------------------------------------------
+2026-05-18 10:04:20,142 [DEBUG] Stopping CanStack
+2026-05-18 10:04:20,146 [DEBUG] Main thread is exiting
+2026-05-18 10:04:20,182 [DEBUG] CanStack Stopped
+2026-05-18 10:04:20,183 [INFO] Connection closed
+2026-05-18 10:04:20,184 [INFO] Running Test Case: TC_ID-142
+2026-05-18 10:04:20,185 [DEBUG] Starting CanStack
+2026-05-18 10:04:20,186 [DEBUG] Main thread has started
+2026-05-18 10:04:20,188 [DEBUG] Relay thread has started
+2026-05-18 10:04:20,189 [INFO] Connection opened
+2026-05-18 10:04:20,191 [INFO] Switched to physical mode for TC: TC_ID-142 Step: PreCondition: PC_ID-023  Testcase:Vehicle_Manufacturer_Spare_Part_Number_F1_87_Read(Defaultsession)
+2026-05-18 10:04:20,192 [INFO] TC_ID-142 - PreCondition: PC_ID-023  Testcase:Vehicle_Manufacturer_Spare_Part_Number_F1_87_Read(Defaultsession): SID=0x22, Sub=0xF187, Expected=[16, 13, 98, 241, 135, 56, 56, 53, 52, 48, 66, 77, 48, 48, 48]
+2026-05-18 10:04:20,193 [DEBUG] Sending 3 bytes : [22f187]
+2026-05-18 10:04:20,194 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:20,197 [DEBUG] Tx: <706> (08) [ ]	 0322f18700000000
+2026-05-18 10:04:20,199 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:20,200 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 87 00 00 00 00
+2026-05-18 10:04:20,229 [DEBUG] Rx: <70E> (08) [p]	 100d62f187383835
+2026-05-18 10:04:20,231 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:20,234 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:20,239 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:20,241 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:20,244 [DEBUG] Rx: <70E> (08) [p]	 213430424d303030
+2026-05-18 10:04:20,246 [DEBUG] Received 13 bytes : [62f1873838353430424d303030]
+2026-05-18 10:04:20,296 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:20,299 [DEBUG] TC_ID-142 PreCondition: PC_ID-023  Testcase:Vehicle_Manufacturer_Spare_Part_Number_F1_87_Read(Defaultsession) -> Received payload: [98, 241, 135, 56, 56, 53, 52, 48, 66, 77, 48, 48, 48]
+2026-05-18 10:04:20,301 [WARNING] -----------------------------------------------TC_ID-142 PreCondition: PC_ID-023  Testcase:Vehicle_Manufacturer_Spare_Part_Number_F1_87_Read(Defaultsession) -> FAIL - Expected [16, 13, 98, 241, 135, 56, 56, 53, 52, 48, 66, 77, 48, 48, 48], got [98, 241, 135, 56, 56, 53, 52, 48, 66, 77, 48, 48, 48]-----------------------------------------------
+2026-05-18 10:04:20,302 [DEBUG] Stopping CanStack
+2026-05-18 10:04:20,305 [DEBUG] Main thread is exiting
+2026-05-18 10:04:20,345 [DEBUG] CanStack Stopped
+2026-05-18 10:04:20,347 [INFO] Connection closed
+2026-05-18 10:04:20,349 [INFO] Running Test Case: TC_ID-143
+2026-05-18 10:04:20,350 [DEBUG] Starting CanStack
+2026-05-18 10:04:20,353 [DEBUG] Main thread has started
+2026-05-18 10:04:20,356 [DEBUG] Relay thread has started
+2026-05-18 10:04:20,358 [INFO] Connection opened
+2026-05-18 10:04:20,360 [INFO] Switched to physical mode for TC: TC_ID-143 Step: PreCondition: PC_ID-023  Testcase:Manufacturing_F1_8B_Read(Defaultsession)
+2026-05-18 10:04:20,361 [INFO] TC_ID-143 - PreCondition: PC_ID-023  Testcase:Manufacturing_F1_8B_Read(Defaultsession): SID=0x22, Sub=0xF18B, Expected=[7, 98, 241, 139, 32, 37, 9, 32]
+2026-05-18 10:04:20,362 [DEBUG] Sending 3 bytes : [22f18b]
+2026-05-18 10:04:20,364 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:20,368 [DEBUG] Tx: <706> (08) [ ]	 0322f18b00000000
+2026-05-18 10:04:20,372 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:20,374 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 8b 00 00 00 00
+2026-05-18 10:04:20,403 [DEBUG] Rx: <70E> (08) [p]	 0762f18b20250920
+2026-05-18 10:04:20,404 [DEBUG] Received 7 bytes : [62f18b20250920]
+2026-05-18 10:04:20,459 [DEBUG] TC_ID-143 PreCondition: PC_ID-023  Testcase:Manufacturing_F1_8B_Read(Defaultsession) -> Received payload: [98, 241, 139, 32, 37, 9, 32]
+2026-05-18 10:04:20,460 [WARNING] -----------------------------------------------TC_ID-143 PreCondition: PC_ID-023  Testcase:Manufacturing_F1_8B_Read(Defaultsession) -> FAIL - Expected [7, 98, 241, 139, 32, 37, 9, 32], got [98, 241, 139, 32, 37, 9, 32]-----------------------------------------------
+2026-05-18 10:04:20,460 [DEBUG] Stopping CanStack
+2026-05-18 10:04:20,462 [DEBUG] Main thread is exiting
+2026-05-18 10:04:20,502 [DEBUG] CanStack Stopped
+2026-05-18 10:04:20,504 [INFO] Connection closed
+2026-05-18 10:04:20,505 [INFO] Running Test Case: TC_ID-144
+2026-05-18 10:04:20,507 [DEBUG] Starting CanStack
+2026-05-18 10:04:20,514 [DEBUG] Main thread has started
+2026-05-18 10:04:20,516 [DEBUG] Relay thread has started
+2026-05-18 10:04:20,519 [INFO] Connection opened
+2026-05-18 10:04:20,521 [INFO] Switched to physical mode for TC: TC_ID-144 Step: PreCondition: PC_ID-023  Testcase:ECU_Serial_Number_F1_8C_Read(Defaultsession)
+2026-05-18 10:04:20,523 [INFO] TC_ID-144 - PreCondition: PC_ID-023  Testcase:ECU_Serial_Number_F1_8C_Read(Defaultsession): SID=0x22, Sub=0xF18C, Expected=[16, 13, 98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52]
+2026-05-18 10:04:20,524 [DEBUG] Sending 3 bytes : [22f18c]
+2026-05-18 10:04:20,525 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:20,527 [DEBUG] Tx: <706> (08) [ ]	 0322f18c00000000
+2026-05-18 10:04:20,529 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:20,530 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 8c 00 00 00 00
+2026-05-18 10:04:20,564 [DEBUG] Rx: <70E> (08) [p]	 100d62f18c303030
+2026-05-18 10:04:20,567 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:20,572 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:20,573 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:20,574 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:20,579 [DEBUG] Rx: <70E> (08) [p]	 2130303030303134
+2026-05-18 10:04:20,581 [DEBUG] Received 13 bytes : [62f18c30303030303030303134]
+2026-05-18 10:04:20,631 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:20,633 [DEBUG] TC_ID-144 PreCondition: PC_ID-023  Testcase:ECU_Serial_Number_F1_8C_Read(Defaultsession) -> Received payload: [98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52]
+2026-05-18 10:04:20,634 [WARNING] -----------------------------------------------TC_ID-144 PreCondition: PC_ID-023  Testcase:ECU_Serial_Number_F1_8C_Read(Defaultsession) -> FAIL - Expected [16, 13, 98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52], got [98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52]-----------------------------------------------
+2026-05-18 10:04:20,634 [DEBUG] Stopping CanStack
+2026-05-18 10:04:20,639 [DEBUG] Main thread is exiting
+2026-05-18 10:04:20,680 [DEBUG] CanStack Stopped
+2026-05-18 10:04:20,681 [INFO] Connection closed
+2026-05-18 10:04:20,681 [INFO] Running Test Case: TC_ID-145
+2026-05-18 10:04:20,682 [DEBUG] Starting CanStack
+2026-05-18 10:04:20,684 [DEBUG] Main thread has started
+2026-05-18 10:04:20,685 [DEBUG] Relay thread has started
+2026-05-18 10:04:20,690 [INFO] Connection opened
+2026-05-18 10:04:20,691 [INFO] Switched to physical mode for TC: TC_ID-145 Step: PreCondition: PC_ID-023  Testcase:Vehicle_Manufacturer_ECU_HW_Number_F1_91_Read(Defaultsession)
+2026-05-18 10:04:20,692 [INFO] TC_ID-145 - PreCondition: PC_ID-023  Testcase:Vehicle_Manufacturer_ECU_HW_Number_F1_91_Read(Defaultsession): SID=0x22, Sub=0xF191, Expected=[7, 98, 241, 145, 68, 46, 48, 48]
+2026-05-18 10:04:20,692 [DEBUG] Sending 3 bytes : [22f191]
+2026-05-18 10:04:20,693 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:20,696 [DEBUG] Tx: <706> (08) [ ]	 0322f19100000000
+2026-05-18 10:04:20,697 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:20,698 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 91 00 00 00 00
+2026-05-18 10:04:20,720 [DEBUG] Rx: <70E> (08) [p]	 0762f191442e3030
+2026-05-18 10:04:20,722 [DEBUG] Received 7 bytes : [62f191442e3030]
+2026-05-18 10:04:20,775 [DEBUG] TC_ID-145 PreCondition: PC_ID-023  Testcase:Vehicle_Manufacturer_ECU_HW_Number_F1_91_Read(Defaultsession) -> Received payload: [98, 241, 145, 68, 46, 48, 48]
+2026-05-18 10:04:20,778 [WARNING] -----------------------------------------------TC_ID-145 PreCondition: PC_ID-023  Testcase:Vehicle_Manufacturer_ECU_HW_Number_F1_91_Read(Defaultsession) -> FAIL - Expected [7, 98, 241, 145, 68, 46, 48, 48], got [98, 241, 145, 68, 46, 48, 48]-----------------------------------------------
+2026-05-18 10:04:20,782 [DEBUG] Stopping CanStack
+2026-05-18 10:04:20,784 [DEBUG] Main thread is exiting
+2026-05-18 10:04:20,821 [DEBUG] CanStack Stopped
+2026-05-18 10:04:20,825 [INFO] Connection closed
+2026-05-18 10:04:20,830 [INFO] Running Test Case: TC_ID-147
+2026-05-18 10:04:20,833 [DEBUG] Starting CanStack
+2026-05-18 10:04:20,838 [DEBUG] Main thread has started
+2026-05-18 10:04:20,839 [DEBUG] Relay thread has started
+2026-05-18 10:04:20,840 [INFO] Connection opened
+2026-05-18 10:04:20,841 [INFO] Switched to physical mode for TC: TC_ID-147 Step: PreCondition: PC_ID-023  Testcase:ECUSoftwareUnit1IVDDataIdentifier_F1_C1_Read(Defaultsession)
+2026-05-18 10:04:20,842 [INFO] TC_ID-147 - PreCondition: PC_ID-023  Testcase:ECUSoftwareUnit1IVDDataIdentifier_F1_C1_Read(Defaultsession): SID=0x22, Sub=0xF1C1, Expected=[16, 35, 98, 241, 193, 159, 39, 161, 112, 88, 192, 15, 24, 59, 100, 210, 76, 182, 111, 147, 141, 213, 29, 254, 157, 5, 103, 57, 199, 58, 175, 206, 204, 120, 235, 3, 175, 170, 170, 170, 170, 170, 170]
+2026-05-18 10:04:20,843 [DEBUG] Sending 3 bytes : [22f1c1]
+2026-05-18 10:04:20,844 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:20,846 [DEBUG] Tx: <706> (08) [ ]	 0322f1c100000000
+2026-05-18 10:04:20,847 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:20,847 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 c1 00 00 00 00
+2026-05-18 10:04:20,870 [DEBUG] Rx: <70E> (08) [p]	 037f2222aaaaaaaa
+2026-05-18 10:04:20,873 [DEBUG] Received 3 bytes : [7f2222]
+2026-05-18 10:04:20,924 [DEBUG] TC_ID-147 PreCondition: PC_ID-023  Testcase:ECUSoftwareUnit1IVDDataIdentifier_F1_C1_Read(Defaultsession) -> Received payload: [127, 34, 34]
+2026-05-18 10:04:20,926 [WARNING] -----------------------------------------------TC_ID-147 PreCondition: PC_ID-023  Testcase:ECUSoftwareUnit1IVDDataIdentifier_F1_C1_Read(Defaultsession) -> FAIL - Expected Positive Response, but got NRC: 0x22-----------------------------------------------
+2026-05-18 10:04:20,928 [DEBUG] Stopping CanStack
+2026-05-18 10:04:20,929 [DEBUG] Main thread is exiting
+2026-05-18 10:04:20,971 [DEBUG] CanStack Stopped
+2026-05-18 10:04:20,972 [INFO] Connection closed
+2026-05-18 10:04:20,974 [INFO] Running Test Case: TC_ID-148
+2026-05-18 10:04:20,975 [DEBUG] Starting CanStack
+2026-05-18 10:04:20,977 [DEBUG] Main thread has started
+2026-05-18 10:04:20,980 [DEBUG] Relay thread has started
+2026-05-18 10:04:20,982 [INFO] Connection opened
+2026-05-18 10:04:20,983 [INFO] Switched to physical mode for TC: TC_ID-148 Step: PreCondition: PC_ID-023  Testcase:SystemSupplierECUSoftwareVersionNumbe_DataIdentifier_F1_95_Read(Defaultsession)
+2026-05-18 10:04:20,988 [INFO] TC_ID-148 - PreCondition: PC_ID-023  Testcase:SystemSupplierECUSoftwareVersionNumbe_DataIdentifier_F1_95_Read(Defaultsession): SID=0x22, Sub=0xF195, Expected=[16, 8, 98, 241, 149, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:20,992 [DEBUG] Sending 3 bytes : [22f195]
+2026-05-18 10:04:20,996 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:21,000 [DEBUG] Tx: <706> (08) [ ]	 0322f19500000000
+2026-05-18 10:04:21,001 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,002 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 95 00 00 00 00
+2026-05-18 10:04:21,030 [DEBUG] Rx: <70E> (08) [p]	 037f2231aaaaaaaa
+2026-05-18 10:04:21,033 [DEBUG] Received 3 bytes : [7f2231]
+2026-05-18 10:04:21,085 [DEBUG] TC_ID-148 PreCondition: PC_ID-023  Testcase:SystemSupplierECUSoftwareVersionNumbe_DataIdentifier_F1_95_Read(Defaultsession) -> Received payload: [127, 34, 49]
+2026-05-18 10:04:21,086 [WARNING] -----------------------------------------------TC_ID-148 PreCondition: PC_ID-023  Testcase:SystemSupplierECUSoftwareVersionNumbe_DataIdentifier_F1_95_Read(Defaultsession) -> FAIL - Expected Positive Response, but got NRC: 0x31-----------------------------------------------
+2026-05-18 10:04:21,088 [DEBUG] Stopping CanStack
+2026-05-18 10:04:21,089 [DEBUG] Main thread is exiting
+2026-05-18 10:04:21,132 [DEBUG] CanStack Stopped
+2026-05-18 10:04:21,133 [INFO] Connection closed
+2026-05-18 10:04:21,134 [INFO] Running Test Case: TC_ID-149
+2026-05-18 10:04:21,136 [DEBUG] Starting CanStack
+2026-05-18 10:04:21,138 [DEBUG] Main thread has started
+2026-05-18 10:04:21,139 [DEBUG] Relay thread has started
+2026-05-18 10:04:21,142 [INFO] Connection opened
+2026-05-18 10:04:21,143 [INFO] Switched to physical mode for TC: TC_ID-149 Step: PreCondition: PC_ID-023  Testcase:Software_Version_for_HKMC_Vehicle_Manufacture_F1_A0_Read(Defaultsession)
+2026-05-18 10:04:21,145 [INFO] TC_ID-149 - PreCondition: PC_ID-023  Testcase:Software_Version_for_HKMC_Vehicle_Manufacture_F1_A0_Read(Defaultsession): SID=0x22, Sub=0xF1A0, Expected=[16, 8, 98, 241, 160, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:21,146 [DEBUG] Sending 3 bytes : [22f1a0]
+2026-05-18 10:04:21,149 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:21,155 [DEBUG] Tx: <706> (08) [ ]	 0322f1a000000000
+2026-05-18 10:04:21,159 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,163 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 a0 00 00 00 00
+2026-05-18 10:04:21,190 [DEBUG] Rx: <70E> (08) [p]	 037f2231aaaaaaaa
+2026-05-18 10:04:21,193 [DEBUG] Received 3 bytes : [7f2231]
+2026-05-18 10:04:21,244 [DEBUG] TC_ID-149 PreCondition: PC_ID-023  Testcase:Software_Version_for_HKMC_Vehicle_Manufacture_F1_A0_Read(Defaultsession) -> Received payload: [127, 34, 49]
+2026-05-18 10:04:21,246 [WARNING] -----------------------------------------------TC_ID-149 PreCondition: PC_ID-023  Testcase:Software_Version_for_HKMC_Vehicle_Manufacture_F1_A0_Read(Defaultsession) -> FAIL - Expected Positive Response, but got NRC: 0x31-----------------------------------------------
+2026-05-18 10:04:21,247 [DEBUG] Stopping CanStack
+2026-05-18 10:04:21,249 [DEBUG] Main thread is exiting
+2026-05-18 10:04:21,291 [DEBUG] CanStack Stopped
+2026-05-18 10:04:21,292 [INFO] Connection closed
+2026-05-18 10:04:21,292 [INFO] Running Test Case: TC_ID-150
+2026-05-18 10:04:21,293 [DEBUG] Starting CanStack
+2026-05-18 10:04:21,295 [DEBUG] Main thread has started
+2026-05-18 10:04:21,296 [DEBUG] Relay thread has started
+2026-05-18 10:04:21,299 [INFO] Connection opened
+2026-05-18 10:04:21,300 [INFO] Switched to physical mode for TC: TC_ID-150 Step: PreCondition: PC_ID-023  Testcase:ECU_Supplier_Code_F1_A1_Read(Defaultsession)
+2026-05-18 10:04:21,302 [INFO] TC_ID-150 - PreCondition: PC_ID-023  Testcase:ECU_Supplier_Code_F1_A1_Read(Defaultsession): SID=0x22, Sub=0xF1A1, Expected=[7, 98, 241, 161, 84, 69, 76, 69]
+2026-05-18 10:04:21,303 [DEBUG] Sending 3 bytes : [22f1a1]
+2026-05-18 10:04:21,305 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:21,307 [DEBUG] Tx: <706> (08) [ ]	 0322f1a100000000
+2026-05-18 10:04:21,308 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,311 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 a1 00 00 00 00
+2026-05-18 10:04:21,342 [DEBUG] Rx: <70E> (08) [p]	 0762f1a154454c45
+2026-05-18 10:04:21,345 [DEBUG] Received 7 bytes : [62f1a154454c45]
+2026-05-18 10:04:21,396 [DEBUG] TC_ID-150 PreCondition: PC_ID-023  Testcase:ECU_Supplier_Code_F1_A1_Read(Defaultsession) -> Received payload: [98, 241, 161, 84, 69, 76, 69]
+2026-05-18 10:04:21,397 [WARNING] -----------------------------------------------TC_ID-150 PreCondition: PC_ID-023  Testcase:ECU_Supplier_Code_F1_A1_Read(Defaultsession) -> FAIL - Expected [7, 98, 241, 161, 84, 69, 76, 69], got [98, 241, 161, 84, 69, 76, 69]-----------------------------------------------
+2026-05-18 10:04:21,399 [DEBUG] Stopping CanStack
+2026-05-18 10:04:21,400 [DEBUG] Main thread is exiting
+2026-05-18 10:04:21,441 [DEBUG] CanStack Stopped
+2026-05-18 10:04:21,442 [INFO] Connection closed
+2026-05-18 10:04:21,443 [INFO] Running Test Case: TC_ID-151
+2026-05-18 10:04:21,444 [DEBUG] Starting CanStack
+2026-05-18 10:04:21,445 [DEBUG] Main thread has started
+2026-05-18 10:04:21,447 [DEBUG] Relay thread has started
+2026-05-18 10:04:21,448 [INFO] Connection opened
+2026-05-18 10:04:21,449 [INFO] Switched to physical mode for TC: TC_ID-151 Step: PreCondition: PC_ID-023  Testcase:ECU_Software_UNIT_number_F1_B0_Read(Defaultsession)
+2026-05-18 10:04:21,450 [INFO] TC_ID-151 - PreCondition: PC_ID-023  Testcase:ECU_Software_UNIT_number_F1_B0_Read(Defaultsession): SID=0x22, Sub=0xF1B0, Expected=[4, 98, 241, 176, 1, 170, 170, 170]
+2026-05-18 10:04:21,451 [DEBUG] Sending 3 bytes : [22f1b0]
+2026-05-18 10:04:21,452 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:21,454 [DEBUG] Tx: <706> (08) [ ]	 0322f1b000000000
+2026-05-18 10:04:21,456 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,457 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 b0 00 00 00 00
+2026-05-18 10:04:21,482 [DEBUG] Rx: <70E> (08) [p]	 0462f1b001aaaaaa
+2026-05-18 10:04:21,489 [DEBUG] Received 4 bytes : [62f1b001]
+2026-05-18 10:04:21,543 [DEBUG] TC_ID-151 PreCondition: PC_ID-023  Testcase:ECU_Software_UNIT_number_F1_B0_Read(Defaultsession) -> Received payload: [98, 241, 176, 1]
+2026-05-18 10:04:21,546 [WARNING] -----------------------------------------------TC_ID-151 PreCondition: PC_ID-023  Testcase:ECU_Software_UNIT_number_F1_B0_Read(Defaultsession) -> FAIL - Expected [4, 98, 241, 176, 1, 170, 170, 170], got [98, 241, 176, 1]-----------------------------------------------
+2026-05-18 10:04:21,556 [DEBUG] Stopping CanStack
+2026-05-18 10:04:21,563 [DEBUG] Main thread is exiting
+2026-05-18 10:04:21,583 [DEBUG] CanStack Stopped
+2026-05-18 10:04:21,585 [INFO] Connection closed
+2026-05-18 10:04:21,587 [INFO] Running Test Case: TC_ID-152
+2026-05-18 10:04:21,588 [DEBUG] Starting CanStack
+2026-05-18 10:04:21,590 [DEBUG] Main thread has started
+2026-05-18 10:04:21,591 [DEBUG] Relay thread has started
+2026-05-18 10:04:21,593 [INFO] Connection opened
+2026-05-18 10:04:21,594 [INFO] Switched to physical mode for TC: TC_ID-152 Step: PreCondition: PC_ID-023  Testcase:ECU_Software_UNIT1_Version_F1_B1_Read(Defaultsession)
+2026-05-18 10:04:21,596 [INFO] TC_ID-152 - PreCondition: PC_ID-023  Testcase:ECU_Software_UNIT1_Version_F1_B1_Read(Defaultsession): SID=0x22, Sub=0xF1B1, Expected=[16, 8, 98, 241, 177, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:21,597 [DEBUG] Sending 3 bytes : [22f1b1]
+2026-05-18 10:04:21,599 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:21,601 [DEBUG] Tx: <706> (08) [ ]	 0322f1b100000000
+2026-05-18 10:04:21,603 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,604 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 b1 00 00 00 00
+2026-05-18 10:04:21,630 [DEBUG] Rx: <70E> (08) [p]	 100862f1b1323541
+2026-05-18 10:04:21,631 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:21,632 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,633 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:21,634 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:21,643 [DEBUG] Rx: <70E> (08) [p]	 213130aaaaaaaaaa
+2026-05-18 10:04:21,645 [DEBUG] Received 8 bytes : [62f1b13235413130]
+2026-05-18 10:04:21,695 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:21,696 [DEBUG] TC_ID-152 PreCondition: PC_ID-023  Testcase:ECU_Software_UNIT1_Version_F1_B1_Read(Defaultsession) -> Received payload: [98, 241, 177, 50, 53, 65, 49, 48]
+2026-05-18 10:04:21,698 [WARNING] -----------------------------------------------TC_ID-152 PreCondition: PC_ID-023  Testcase:ECU_Software_UNIT1_Version_F1_B1_Read(Defaultsession) -> FAIL - Expected [16, 8, 98, 241, 177, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170], got [98, 241, 177, 50, 53, 65, 49, 48]-----------------------------------------------
+2026-05-18 10:04:21,699 [DEBUG] Stopping CanStack
+2026-05-18 10:04:21,701 [DEBUG] Main thread is exiting
+2026-05-18 10:04:21,747 [DEBUG] CanStack Stopped
+2026-05-18 10:04:21,748 [INFO] Connection closed
+2026-05-18 10:04:21,749 [INFO] Running Test Case: TC_ID-153
+2026-05-18 10:04:21,751 [DEBUG] Starting CanStack
+2026-05-18 10:04:21,753 [DEBUG] Main thread has started
+2026-05-18 10:04:21,755 [DEBUG] Relay thread has started
+2026-05-18 10:04:21,758 [INFO] Connection opened
+2026-05-18 10:04:21,759 [INFO] Switched to physical mode for TC: TC_ID-153 Step: PreCondition: PC_ID-023  Testcase:S_W_Version_Dataidentifier_F1_DD_Read(Defaultsession)
+2026-05-18 10:04:21,760 [INFO] TC_ID-153 - PreCondition: PC_ID-023  Testcase:S_W_Version_Dataidentifier_F1_DD_Read(Defaultsession): SID=0x22, Sub=0xF1DD, Expected=[16, 11, 98, 241, 221, 48, 49, 46, 48, 48, 46, 48, 49, 170, 170]
+2026-05-18 10:04:21,762 [DEBUG] Sending 3 bytes : [22f1dd]
+2026-05-18 10:04:21,763 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:21,765 [DEBUG] Tx: <706> (08) [ ]	 0322f1dd00000000
+2026-05-18 10:04:21,766 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,768 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 dd 00 00 00 00
+2026-05-18 10:04:21,794 [DEBUG] Rx: <70E> (08) [p]	 100a62f1dd323541
+2026-05-18 10:04:21,795 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:21,796 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,796 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:21,798 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:21,801 [DEBUG] Rx: <70E> (08) [p]	 2131303030aaaaaa
+2026-05-18 10:04:21,802 [DEBUG] Received 10 bytes : [62f1dd32354131303030]
+2026-05-18 10:04:21,852 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:21,853 [DEBUG] TC_ID-153 PreCondition: PC_ID-023  Testcase:S_W_Version_Dataidentifier_F1_DD_Read(Defaultsession) -> Received payload: [98, 241, 221, 50, 53, 65, 49, 48, 48, 48]
+2026-05-18 10:04:21,855 [WARNING] -----------------------------------------------TC_ID-153 PreCondition: PC_ID-023  Testcase:S_W_Version_Dataidentifier_F1_DD_Read(Defaultsession) -> FAIL - Expected [16, 11, 98, 241, 221, 48, 49, 46, 48, 48, 46, 48, 49, 170, 170], got [98, 241, 221, 50, 53, 65, 49, 48, 48, 48]-----------------------------------------------
+2026-05-18 10:04:21,856 [DEBUG] Stopping CanStack
+2026-05-18 10:04:21,857 [DEBUG] Main thread is exiting
+2026-05-18 10:04:21,903 [DEBUG] CanStack Stopped
+2026-05-18 10:04:21,905 [INFO] Connection closed
+2026-05-18 10:04:21,906 [INFO] Running Test Case: TC_ID-154
+2026-05-18 10:04:21,906 [DEBUG] Starting CanStack
+2026-05-18 10:04:21,908 [DEBUG] Main thread has started
+2026-05-18 10:04:21,909 [DEBUG] Relay thread has started
+2026-05-18 10:04:21,911 [INFO] Connection opened
+2026-05-18 10:04:21,913 [INFO] Switched to physical mode for TC: TC_ID-154 Step: PreCondition: PC_ID-023  Testcase:SystemNameOrEngineTypeDataIdentifier_Read(Defaultsession)
+2026-05-18 10:04:21,914 [INFO] TC_ID-154 - PreCondition: PC_ID-023  Testcase:SystemNameOrEngineTypeDataIdentifier_Read(Defaultsession): SID=0x22, Sub=0xF197, Expected=[7, 98, 241, 151, 77, 75, 66, 68]
+2026-05-18 10:04:21,915 [DEBUG] Sending 3 bytes : [22f197]
+2026-05-18 10:04:21,916 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:21,918 [DEBUG] Tx: <706> (08) [ ]	 0322f19700000000
+2026-05-18 10:04:21,919 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,920 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 97 00 00 00 00
+2026-05-18 10:04:21,941 [DEBUG] Rx: <70E> (08) [p]	 100e62f197534856
+2026-05-18 10:04:21,943 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:21,944 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:21,946 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:21,952 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:21,961 [DEBUG] Rx: <70E> (08) [p]	 21555f4652202020
+2026-05-18 10:04:22,060 [DEBUG] Rx: <70E> (08) [p]	 2220aaaaaaaaaaaa
+2026-05-18 10:04:22,061 [DEBUG] Received 14 bytes : [62f197534856555f465220202020]
+2026-05-18 10:04:22,111 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:22,112 [DEBUG] TC_ID-154 PreCondition: PC_ID-023  Testcase:SystemNameOrEngineTypeDataIdentifier_Read(Defaultsession) -> Received payload: [98, 241, 151, 83, 72, 86, 85, 95, 70, 82, 32, 32, 32, 32]
+2026-05-18 10:04:22,115 [WARNING] -----------------------------------------------TC_ID-154 PreCondition: PC_ID-023  Testcase:SystemNameOrEngineTypeDataIdentifier_Read(Defaultsession) -> FAIL - Expected [7, 98, 241, 151, 77, 75, 66, 68], got [98, 241, 151, 83, 72, 86, 85, 95]-----------------------------------------------
+2026-05-18 10:04:22,116 [DEBUG] Stopping CanStack
+2026-05-18 10:04:22,117 [DEBUG] Main thread is exiting
+2026-05-18 10:04:22,161 [DEBUG] CanStack Stopped
+2026-05-18 10:04:22,163 [INFO] Connection closed
+2026-05-18 10:04:22,165 [INFO] Running Test Case: TC_ID-155
+2026-05-18 10:04:22,166 [DEBUG] Starting CanStack
+2026-05-18 10:04:22,170 [DEBUG] Main thread has started
+2026-05-18 10:04:22,172 [DEBUG] Relay thread has started
+2026-05-18 10:04:22,173 [INFO] Connection opened
+2026-05-18 10:04:22,175 [INFO] Switched to physical mode for TC: TC_ID-155 Step: PreCondition: PC_ID-024  Testcase:RX_SWIN_F1_EF_Read(Extended session)
+2026-05-18 10:04:22,176 [INFO] TC_ID-155 - PreCondition: PC_ID-024  Testcase:RX_SWIN_F1_EF_Read(Extended session): SID=0x22, Sub=0xF1EF, Expected=[16, 43, 98, 241, 239, 7, 22, 11, 82, 49, 48, 32, 65, 89, 49, 47, 49, 47, 48, 12, 82, 49, 53, 53, 32, 65, 89, 49, 47, 49, 47, 48, 12, 82, 49, 53, 54, 32, 65, 89, 49, 47, 49, 47, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:22,177 [DEBUG] Sending 3 bytes : [22f1ef]
+2026-05-18 10:04:22,179 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:22,181 [DEBUG] Tx: <706> (08) [ ]	 0322f1ef00000000
+2026-05-18 10:04:22,183 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:22,184 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 ef 00 00 00 00
+2026-05-18 10:04:22,210 [DEBUG] Rx: <70E> (08) [p]	 102b62f1ef07060b
+2026-05-18 10:04:22,211 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:22,212 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:22,213 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:22,215 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:22,220 [DEBUG] Rx: <70E> (08) [p]	 2152313020535033
+2026-05-18 10:04:22,325 [DEBUG] Rx: <70E> (08) [p]	 222f312f300c5231
+2026-05-18 10:04:22,430 [DEBUG] Rx: <70E> (08) [p]	 233535205350332f
+2026-05-18 10:04:22,535 [DEBUG] Rx: <70E> (08) [p]	 24312f300c523135
+2026-05-18 10:04:22,640 [DEBUG] Rx: <70E> (08) [p]	 2536205350332f31
+2026-05-18 10:04:22,745 [DEBUG] Rx: <70E> (08) [p]	 262f30aaaaaaaaaa
+2026-05-18 10:04:22,746 [DEBUG] Received 43 bytes : [62f1ef07060b523130205350332f312f300c52313535205350332f312f300c52313536205350332f312f30]
+2026-05-18 10:04:22,797 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:22,798 [DEBUG] TC_ID-155 PreCondition: PC_ID-024  Testcase:RX_SWIN_F1_EF_Read(Extended session) -> Received payload: [98, 241, 239, 7, 6, 11, 82, 49, 48, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 53, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 54, 32, 83, 80, 51, 47, 49, 47, 48]
+2026-05-18 10:04:22,801 [WARNING] -----------------------------------------------TC_ID-155 PreCondition: PC_ID-024  Testcase:RX_SWIN_F1_EF_Read(Extended session) -> FAIL - Expected [16, 43, 98, 241, 239, 7, 22, 11, 82, 49, 48, 32, 65, 89, 49, 47, 49, 47, 48, 12, 82, 49, 53, 53, 32, 65, 89, 49, 47, 49, 47, 48, 12, 82, 49, 53, 54, 32, 65, 89, 49, 47, 49, 47, 48, 170, 170, 170, 170, 170], got [98, 241, 239, 7, 6, 11, 82, 49, 48, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 53, 32, 83, 80, 51, 47, 49, 47, 48, 12, 82, 49, 53, 54, 32, 83, 80, 51, 47, 49, 47, 48]-----------------------------------------------
+2026-05-18 10:04:22,802 [DEBUG] Stopping CanStack
+2026-05-18 10:04:22,803 [DEBUG] Main thread is exiting
+2026-05-18 10:04:22,846 [DEBUG] CanStack Stopped
+2026-05-18 10:04:22,847 [INFO] Connection closed
+2026-05-18 10:04:22,848 [INFO] Running Test Case: TC_ID-156
+2026-05-18 10:04:22,848 [DEBUG] Starting CanStack
+2026-05-18 10:04:22,849 [DEBUG] Main thread has started
+2026-05-18 10:04:22,851 [DEBUG] Relay thread has started
+2026-05-18 10:04:22,852 [INFO] Connection opened
+2026-05-18 10:04:22,853 [INFO] Switched to physical mode for TC: TC_ID-156 Step: PreCondition: PC_ID-024  Testcase:B_CAN_Database_Version_F1_00_Read(Extendedsession)
+2026-05-18 10:04:22,854 [INFO] TC_ID-156 - PreCondition: PC_ID-024  Testcase:B_CAN_Database_Version_F1_00_Read(Extendedsession): SID=0x22, Sub=0xF100, Expected=[6, 98, 241, 0, 37, 2, 1, 170]
+2026-05-18 10:04:22,855 [DEBUG] Sending 3 bytes : [22f100]
+2026-05-18 10:04:22,857 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:22,859 [DEBUG] Tx: <706> (08) [ ]	 0322f10000000000
+2026-05-18 10:04:22,861 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:22,862 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 00 00 00 00 00
+2026-05-18 10:04:22,895 [DEBUG] Rx: <70E> (08) [p]	 037f2231aaaaaaaa
+2026-05-18 10:04:22,899 [DEBUG] Received 3 bytes : [7f2231]
+2026-05-18 10:04:22,952 [DEBUG] TC_ID-156 PreCondition: PC_ID-024  Testcase:B_CAN_Database_Version_F1_00_Read(Extendedsession) -> Received payload: [127, 34, 49]
+2026-05-18 10:04:22,954 [WARNING] -----------------------------------------------TC_ID-156 PreCondition: PC_ID-024  Testcase:B_CAN_Database_Version_F1_00_Read(Extendedsession) -> FAIL - Expected Positive Response, but got NRC: 0x31-----------------------------------------------
+2026-05-18 10:04:22,955 [DEBUG] Stopping CanStack
+2026-05-18 10:04:22,956 [DEBUG] Main thread is exiting
+2026-05-18 10:04:22,995 [DEBUG] CanStack Stopped
+2026-05-18 10:04:22,999 [INFO] Connection closed
+2026-05-18 10:04:23,003 [INFO] Running Test Case: TC_ID-157
+2026-05-18 10:04:23,007 [DEBUG] Starting CanStack
+2026-05-18 10:04:23,010 [DEBUG] Main thread has started
+2026-05-18 10:04:23,011 [DEBUG] Relay thread has started
+2026-05-18 10:04:23,012 [INFO] Connection opened
+2026-05-18 10:04:23,013 [INFO] Switched to physical mode for TC: TC_ID-157 Step: PreCondition: PC_ID-024  Testcase:Vehicle_Manufacturer_Spare_Part_Number_F1_87_Read(Extendedsession)
+2026-05-18 10:04:23,014 [INFO] TC_ID-157 - PreCondition: PC_ID-024  Testcase:Vehicle_Manufacturer_Spare_Part_Number_F1_87_Read(Extendedsession): SID=0x22, Sub=0xF187, Expected=[16, 13, 98, 241, 135, 57, 54, 53, 52, 48, 83, 66, 48, 48, 48]
+2026-05-18 10:04:23,015 [DEBUG] Sending 3 bytes : [22f187]
+2026-05-18 10:04:23,016 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:23,017 [DEBUG] Tx: <706> (08) [ ]	 0322f18700000000
+2026-05-18 10:04:23,018 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,020 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 87 00 00 00 00
+2026-05-18 10:04:23,041 [DEBUG] Rx: <70E> (08) [p]	 100d62f187383835
+2026-05-18 10:04:23,043 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:23,045 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,047 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:23,050 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:23,062 [DEBUG] Rx: <70E> (08) [p]	 213430424d303030
+2026-05-18 10:04:23,065 [DEBUG] Received 13 bytes : [62f1873838353430424d303030]
+2026-05-18 10:04:23,116 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:23,118 [DEBUG] TC_ID-157 PreCondition: PC_ID-024  Testcase:Vehicle_Manufacturer_Spare_Part_Number_F1_87_Read(Extendedsession) -> Received payload: [98, 241, 135, 56, 56, 53, 52, 48, 66, 77, 48, 48, 48]
+2026-05-18 10:04:23,120 [WARNING] -----------------------------------------------TC_ID-157 PreCondition: PC_ID-024  Testcase:Vehicle_Manufacturer_Spare_Part_Number_F1_87_Read(Extendedsession) -> FAIL - Expected [16, 13, 98, 241, 135, 57, 54, 53, 52, 48, 83, 66, 48, 48, 48], got [98, 241, 135, 56, 56, 53, 52, 48, 66, 77, 48, 48, 48]-----------------------------------------------
+2026-05-18 10:04:23,120 [DEBUG] Stopping CanStack
+2026-05-18 10:04:23,121 [DEBUG] Main thread is exiting
+2026-05-18 10:04:23,164 [DEBUG] CanStack Stopped
+2026-05-18 10:04:23,167 [INFO] Connection closed
+2026-05-18 10:04:23,172 [INFO] Running Test Case: TC_ID-158
+2026-05-18 10:04:23,173 [DEBUG] Starting CanStack
+2026-05-18 10:04:23,174 [DEBUG] Main thread has started
+2026-05-18 10:04:23,176 [DEBUG] Relay thread has started
+2026-05-18 10:04:23,177 [INFO] Connection opened
+2026-05-18 10:04:23,178 [INFO] Switched to physical mode for TC: TC_ID-158 Step: PreCondition: PC_ID-024  Testcase:Manufacturing_F1_8B_Read(Extendedsession)
+2026-05-18 10:04:23,179 [INFO] TC_ID-158 - PreCondition: PC_ID-024  Testcase:Manufacturing_F1_8B_Read(Extendedsession): SID=0x22, Sub=0xF18B, Expected=[7, 98, 241, 139, 0, 0, 0, 0]
+2026-05-18 10:04:23,180 [DEBUG] Sending 3 bytes : [22f18b]
+2026-05-18 10:04:23,181 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:23,182 [DEBUG] Tx: <706> (08) [ ]	 0322f18b00000000
+2026-05-18 10:04:23,184 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,185 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 8b 00 00 00 00
+2026-05-18 10:04:23,211 [DEBUG] Rx: <70E> (08) [p]	 0762f18b20250920
+2026-05-18 10:04:23,216 [DEBUG] Received 7 bytes : [62f18b20250920]
+2026-05-18 10:04:23,270 [DEBUG] TC_ID-158 PreCondition: PC_ID-024  Testcase:Manufacturing_F1_8B_Read(Extendedsession) -> Received payload: [98, 241, 139, 32, 37, 9, 32]
+2026-05-18 10:04:23,274 [WARNING] -----------------------------------------------TC_ID-158 PreCondition: PC_ID-024  Testcase:Manufacturing_F1_8B_Read(Extendedsession) -> FAIL - Expected [7, 98, 241, 139, 0, 0, 0, 0], got [98, 241, 139, 32, 37, 9, 32]-----------------------------------------------
+2026-05-18 10:04:23,277 [DEBUG] Stopping CanStack
+2026-05-18 10:04:23,282 [DEBUG] Main thread is exiting
+2026-05-18 10:04:23,312 [DEBUG] CanStack Stopped
+2026-05-18 10:04:23,313 [INFO] Connection closed
+2026-05-18 10:04:23,315 [INFO] Running Test Case: TC_ID-159
+2026-05-18 10:04:23,316 [DEBUG] Starting CanStack
+2026-05-18 10:04:23,319 [DEBUG] Main thread has started
+2026-05-18 10:04:23,320 [DEBUG] Relay thread has started
+2026-05-18 10:04:23,328 [INFO] Connection opened
+2026-05-18 10:04:23,331 [INFO] Switched to physical mode for TC: TC_ID-159 Step: PreCondition: PC_ID-024  Testcase:ECU_Serial_Number_F1_8C_Read(Extendedsession)
+2026-05-18 10:04:23,335 [INFO] TC_ID-159 - PreCondition: PC_ID-024  Testcase:ECU_Serial_Number_F1_8C_Read(Extendedsession): SID=0x22, Sub=0xF18C, Expected=[16, 35, 98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 51, 49, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 170, 170, 170, 170, 170, 170]
+2026-05-18 10:04:23,337 [DEBUG] Sending 3 bytes : [22f18c]
+2026-05-18 10:04:23,338 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:23,339 [DEBUG] Tx: <706> (08) [ ]	 0322f18c00000000
+2026-05-18 10:04:23,340 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,341 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 8c 00 00 00 00
+2026-05-18 10:04:23,362 [DEBUG] Rx: <70E> (08) [p]	 100d62f18c303030
+2026-05-18 10:04:23,364 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:23,365 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,366 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:23,368 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:23,379 [DEBUG] Rx: <70E> (08) [p]	 2130303030303134
+2026-05-18 10:04:23,385 [DEBUG] Received 13 bytes : [62f18c30303030303030303134]
+2026-05-18 10:04:23,436 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:23,441 [DEBUG] TC_ID-159 PreCondition: PC_ID-024  Testcase:ECU_Serial_Number_F1_8C_Read(Extendedsession) -> Received payload: [98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52]
+2026-05-18 10:04:23,445 [WARNING] -----------------------------------------------TC_ID-159 PreCondition: PC_ID-024  Testcase:ECU_Serial_Number_F1_8C_Read(Extendedsession) -> FAIL - Expected [16, 35, 98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 51, 49, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 170, 170, 170, 170, 170, 170], got [98, 241, 140, 48, 48, 48, 48, 48, 48, 48, 48, 49, 52]-----------------------------------------------
+2026-05-18 10:04:23,446 [DEBUG] Stopping CanStack
+2026-05-18 10:04:23,447 [DEBUG] Main thread is exiting
+2026-05-18 10:04:23,480 [DEBUG] CanStack Stopped
+2026-05-18 10:04:23,482 [INFO] Connection closed
+2026-05-18 10:04:23,483 [INFO] Running Test Case: TC_ID-160
+2026-05-18 10:04:23,488 [DEBUG] Starting CanStack
+2026-05-18 10:04:23,494 [DEBUG] Main thread has started
+2026-05-18 10:04:23,499 [DEBUG] Relay thread has started
+2026-05-18 10:04:23,500 [INFO] Connection opened
+2026-05-18 10:04:23,501 [INFO] Switched to physical mode for TC: TC_ID-160 Step: PreCondition: PC_ID-024  Testcase:Vehicle_Manufacturer_ECU_HW_Number_F1_91_Read(Extendedsession)
+2026-05-18 10:04:23,502 [INFO] TC_ID-160 - PreCondition: PC_ID-024  Testcase:Vehicle_Manufacturer_ECU_HW_Number_F1_91_Read(Extendedsession): SID=0x22, Sub=0xF191, Expected=[16, 8, 98, 241, 145, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:23,503 [DEBUG] Sending 3 bytes : [22f191]
+2026-05-18 10:04:23,503 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:23,505 [DEBUG] Tx: <706> (08) [ ]	 0322f19100000000
+2026-05-18 10:04:23,506 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,507 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 91 00 00 00 00
+2026-05-18 10:04:23,531 [DEBUG] Rx: <70E> (08) [p]	 0762f191442e3030
+2026-05-18 10:04:23,534 [DEBUG] Received 7 bytes : [62f191442e3030]
+2026-05-18 10:04:23,585 [DEBUG] TC_ID-160 PreCondition: PC_ID-024  Testcase:Vehicle_Manufacturer_ECU_HW_Number_F1_91_Read(Extendedsession) -> Received payload: [98, 241, 145, 68, 46, 48, 48]
+2026-05-18 10:04:23,587 [WARNING] -----------------------------------------------TC_ID-160 PreCondition: PC_ID-024  Testcase:Vehicle_Manufacturer_ECU_HW_Number_F1_91_Read(Extendedsession) -> FAIL - Expected [16, 8, 98, 241, 145, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170], got [98, 241, 145, 68, 46, 48, 48]-----------------------------------------------
+2026-05-18 10:04:23,588 [DEBUG] Stopping CanStack
+2026-05-18 10:04:23,590 [DEBUG] Main thread is exiting
+2026-05-18 10:04:23,633 [DEBUG] CanStack Stopped
+2026-05-18 10:04:23,634 [INFO] Connection closed
+2026-05-18 10:04:23,635 [INFO] Running Test Case: TC_ID-161
+2026-05-18 10:04:23,636 [DEBUG] Starting CanStack
+2026-05-18 10:04:23,638 [DEBUG] Main thread has started
+2026-05-18 10:04:23,640 [DEBUG] Relay thread has started
+2026-05-18 10:04:23,642 [INFO] Connection opened
+2026-05-18 10:04:23,643 [INFO] Switched to physical mode for TC: TC_ID-161 Step: PreCondition: PC_ID-024  Testcase:HardwareVersionNumber_F1_93_Read(Extendedsession)
+2026-05-18 10:04:23,645 [INFO] TC_ID-161 - PreCondition: PC_ID-024  Testcase:HardwareVersionNumber_F1_93_Read(Extendedsession): SID=0x22, Sub=0xF193, Expected=[16, 8, 98, 241, 147, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:23,646 [DEBUG] Sending 3 bytes : [22f193]
+2026-05-18 10:04:23,648 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:23,650 [DEBUG] Tx: <706> (08) [ ]	 0322f19300000000
+2026-05-18 10:04:23,653 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,659 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 93 00 00 00 00
+2026-05-18 10:04:23,691 [DEBUG] Rx: <70E> (08) [p]	 0762f193442e3030
+2026-05-18 10:04:23,693 [DEBUG] Received 7 bytes : [62f193442e3030]
+2026-05-18 10:04:23,745 [DEBUG] TC_ID-161 PreCondition: PC_ID-024  Testcase:HardwareVersionNumber_F1_93_Read(Extendedsession) -> Received payload: [98, 241, 147, 68, 46, 48, 48]
+2026-05-18 10:04:23,746 [WARNING] -----------------------------------------------TC_ID-161 PreCondition: PC_ID-024  Testcase:HardwareVersionNumber_F1_93_Read(Extendedsession) -> FAIL - Expected [16, 8, 98, 241, 147, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170], got [98, 241, 147, 68, 46, 48, 48]-----------------------------------------------
+2026-05-18 10:04:23,748 [DEBUG] Stopping CanStack
+2026-05-18 10:04:23,749 [DEBUG] Main thread is exiting
+2026-05-18 10:04:23,795 [DEBUG] CanStack Stopped
+2026-05-18 10:04:23,796 [INFO] Connection closed
+2026-05-18 10:04:23,797 [INFO] Running Test Case: TC_ID-162
+2026-05-18 10:04:23,798 [DEBUG] Starting CanStack
+2026-05-18 10:04:23,800 [DEBUG] Main thread has started
+2026-05-18 10:04:23,802 [DEBUG] Relay thread has started
+2026-05-18 10:04:23,804 [INFO] Connection opened
+2026-05-18 10:04:23,805 [INFO] Switched to physical mode for TC: TC_ID-162 Step: PreCondition: PC_ID-024  Testcase:ECUSoftwareUnit1IVDDataIdentifier_F1_C1_Read(Extendedsession)
+2026-05-18 10:04:23,807 [INFO] TC_ID-162 - PreCondition: PC_ID-024  Testcase:ECUSoftwareUnit1IVDDataIdentifier_F1_C1_Read(Extendedsession): SID=0x22, Sub=0xF1C1, Expected=[16, 35, 98, 241, 193, 159, 39, 161, 112, 88, 192, 15, 24, 59, 100, 210, 76, 182, 111, 147, 141, 213, 29, 254, 157, 5, 103, 57, 199, 58, 175, 206, 204, 120, 235, 3, 175, 170, 170, 170, 170, 170, 170]
+2026-05-18 10:04:23,808 [DEBUG] Sending 3 bytes : [22f1c1]
+2026-05-18 10:04:23,809 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:23,812 [DEBUG] Tx: <706> (08) [ ]	 0322f1c100000000
+2026-05-18 10:04:23,813 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,819 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 c1 00 00 00 00
+2026-05-18 10:04:23,851 [DEBUG] Rx: <70E> (08) [p]	 037f2222aaaaaaaa
+2026-05-18 10:04:23,852 [DEBUG] Received 3 bytes : [7f2222]
+2026-05-18 10:04:23,903 [DEBUG] TC_ID-162 PreCondition: PC_ID-024  Testcase:ECUSoftwareUnit1IVDDataIdentifier_F1_C1_Read(Extendedsession) -> Received payload: [127, 34, 34]
+2026-05-18 10:04:23,904 [WARNING] -----------------------------------------------TC_ID-162 PreCondition: PC_ID-024  Testcase:ECUSoftwareUnit1IVDDataIdentifier_F1_C1_Read(Extendedsession) -> FAIL - Expected Positive Response, but got NRC: 0x22-----------------------------------------------
+2026-05-18 10:04:23,905 [DEBUG] Stopping CanStack
+2026-05-18 10:04:23,906 [DEBUG] Main thread is exiting
+2026-05-18 10:04:23,954 [DEBUG] CanStack Stopped
+2026-05-18 10:04:23,956 [INFO] Connection closed
+2026-05-18 10:04:23,957 [INFO] Running Test Case: TC_ID-163
+2026-05-18 10:04:23,957 [DEBUG] Starting CanStack
+2026-05-18 10:04:23,960 [DEBUG] Main thread has started
+2026-05-18 10:04:23,961 [DEBUG] Relay thread has started
+2026-05-18 10:04:23,963 [INFO] Connection opened
+2026-05-18 10:04:23,964 [INFO] Switched to physical mode for TC: TC_ID-163 Step: PreCondition: PC_ID-024  Testcase:SystemSupplierECUSoftwareVersionNumbe_DataIdentifier_F1_95_Read(Extendedsession)
+2026-05-18 10:04:23,965 [INFO] TC_ID-163 - PreCondition: PC_ID-024  Testcase:SystemSupplierECUSoftwareVersionNumbe_DataIdentifier_F1_95_Read(Extendedsession): SID=0x22, Sub=0xF195, Expected=[16, 8, 98, 241, 149, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:23,966 [DEBUG] Sending 3 bytes : [22f195]
+2026-05-18 10:04:23,968 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:23,970 [DEBUG] Tx: <706> (08) [ ]	 0322f19500000000
+2026-05-18 10:04:23,971 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:23,973 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 95 00 00 00 00
+2026-05-18 10:04:24,001 [DEBUG] Rx: <70E> (08) [p]	 037f2231aaaaaaaa
+2026-05-18 10:04:24,003 [DEBUG] Received 3 bytes : [7f2231]
+2026-05-18 10:04:24,057 [DEBUG] TC_ID-163 PreCondition: PC_ID-024  Testcase:SystemSupplierECUSoftwareVersionNumbe_DataIdentifier_F1_95_Read(Extendedsession) -> Received payload: [127, 34, 49]
+2026-05-18 10:04:24,058 [WARNING] -----------------------------------------------TC_ID-163 PreCondition: PC_ID-024  Testcase:SystemSupplierECUSoftwareVersionNumbe_DataIdentifier_F1_95_Read(Extendedsession) -> FAIL - Expected Positive Response, but got NRC: 0x31-----------------------------------------------
+2026-05-18 10:04:24,059 [DEBUG] Stopping CanStack
+2026-05-18 10:04:24,060 [DEBUG] Main thread is exiting
+2026-05-18 10:04:24,103 [DEBUG] CanStack Stopped
+2026-05-18 10:04:24,107 [INFO] Connection closed
+2026-05-18 10:04:24,107 [INFO] Running Test Case: TC_ID-164
+2026-05-18 10:04:24,108 [DEBUG] Starting CanStack
+2026-05-18 10:04:24,109 [DEBUG] Main thread has started
+2026-05-18 10:04:24,110 [DEBUG] Relay thread has started
+2026-05-18 10:04:24,112 [INFO] Connection opened
+2026-05-18 10:04:24,113 [INFO] Switched to physical mode for TC: TC_ID-164 Step: PreCondition: PC_ID-024  Testcase:Software_Version_for_HKMC_Vehicle_Manufacture_F1_A0_Read(Extendedsession)
+2026-05-18 10:04:24,114 [INFO] TC_ID-164 - PreCondition: PC_ID-024  Testcase:Software_Version_for_HKMC_Vehicle_Manufacture_F1_A0_Read(Extendedsession): SID=0x22, Sub=0xF1A0, Expected=[16, 8, 98, 241, 160, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:24,115 [DEBUG] Sending 3 bytes : [22f1a0]
+2026-05-18 10:04:24,115 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:24,117 [DEBUG] Tx: <706> (08) [ ]	 0322f1a000000000
+2026-05-18 10:04:24,118 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,119 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 a0 00 00 00 00
+2026-05-18 10:04:24,141 [DEBUG] Rx: <70E> (08) [p]	 037f2231aaaaaaaa
+2026-05-18 10:04:24,144 [DEBUG] Received 3 bytes : [7f2231]
+2026-05-18 10:04:24,196 [DEBUG] TC_ID-164 PreCondition: PC_ID-024  Testcase:Software_Version_for_HKMC_Vehicle_Manufacture_F1_A0_Read(Extendedsession) -> Received payload: [127, 34, 49]
+2026-05-18 10:04:24,197 [WARNING] -----------------------------------------------TC_ID-164 PreCondition: PC_ID-024  Testcase:Software_Version_for_HKMC_Vehicle_Manufacture_F1_A0_Read(Extendedsession) -> FAIL - Expected Positive Response, but got NRC: 0x31-----------------------------------------------
+2026-05-18 10:04:24,198 [DEBUG] Stopping CanStack
+2026-05-18 10:04:24,201 [DEBUG] Main thread is exiting
+2026-05-18 10:04:24,243 [DEBUG] CanStack Stopped
+2026-05-18 10:04:24,244 [INFO] Connection closed
+2026-05-18 10:04:24,246 [INFO] Running Test Case: TC_ID-165
+2026-05-18 10:04:24,247 [DEBUG] Starting CanStack
+2026-05-18 10:04:24,250 [DEBUG] Main thread has started
+2026-05-18 10:04:24,252 [DEBUG] Relay thread has started
+2026-05-18 10:04:24,257 [INFO] Connection opened
+2026-05-18 10:04:24,260 [INFO] Switched to physical mode for TC: TC_ID-165 Step: PreCondition: PC_ID-024  Testcase:ECU_Supplier_Code_F1_A1_Read(Extendedsession)
+2026-05-18 10:04:24,264 [INFO] TC_ID-165 - PreCondition: PC_ID-024  Testcase:ECU_Supplier_Code_F1_A1_Read(Extendedsession): SID=0x22, Sub=0xF1A1, Expected=[7, 98, 241, 161, 97, 56, 49, 50]
+2026-05-18 10:04:24,267 [DEBUG] Sending 3 bytes : [22f1a1]
+2026-05-18 10:04:24,269 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:24,271 [DEBUG] Tx: <706> (08) [ ]	 0322f1a100000000
+2026-05-18 10:04:24,272 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,272 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 a1 00 00 00 00
+2026-05-18 10:04:24,301 [DEBUG] Rx: <70E> (08) [p]	 0762f1a154454c45
+2026-05-18 10:04:24,304 [DEBUG] Received 7 bytes : [62f1a154454c45]
+2026-05-18 10:04:24,355 [DEBUG] TC_ID-165 PreCondition: PC_ID-024  Testcase:ECU_Supplier_Code_F1_A1_Read(Extendedsession) -> Received payload: [98, 241, 161, 84, 69, 76, 69]
+2026-05-18 10:04:24,357 [WARNING] -----------------------------------------------TC_ID-165 PreCondition: PC_ID-024  Testcase:ECU_Supplier_Code_F1_A1_Read(Extendedsession) -> FAIL - Expected [7, 98, 241, 161, 97, 56, 49, 50], got [98, 241, 161, 84, 69, 76, 69]-----------------------------------------------
+2026-05-18 10:04:24,358 [DEBUG] Stopping CanStack
+2026-05-18 10:04:24,361 [DEBUG] Main thread is exiting
+2026-05-18 10:04:24,402 [DEBUG] CanStack Stopped
+2026-05-18 10:04:24,403 [INFO] Connection closed
+2026-05-18 10:04:24,405 [INFO] Running Test Case: TC_ID-166
+2026-05-18 10:04:24,406 [DEBUG] Starting CanStack
+2026-05-18 10:04:24,408 [DEBUG] Main thread has started
+2026-05-18 10:04:24,411 [DEBUG] Relay thread has started
+2026-05-18 10:04:24,412 [INFO] Connection opened
+2026-05-18 10:04:24,414 [INFO] Switched to physical mode for TC: TC_ID-166 Step: PreCondition: PC_ID-024  Testcase:ECU_Software_UNIT_number_F1_B0_Read(Extendedsession)
+2026-05-18 10:04:24,418 [INFO] TC_ID-166 - PreCondition: PC_ID-024  Testcase:ECU_Software_UNIT_number_F1_B0_Read(Extendedsession): SID=0x22, Sub=0xF1B0, Expected=[4, 98, 241, 176, 1, 170, 170, 170]
+2026-05-18 10:04:24,421 [DEBUG] Sending 3 bytes : [22f1b0]
+2026-05-18 10:04:24,425 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:24,430 [DEBUG] Tx: <706> (08) [ ]	 0322f1b000000000
+2026-05-18 10:04:24,431 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,432 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 b0 00 00 00 00
+2026-05-18 10:04:24,451 [DEBUG] Rx: <70E> (08) [p]	 0462f1b001aaaaaa
+2026-05-18 10:04:24,453 [DEBUG] Received 4 bytes : [62f1b001]
+2026-05-18 10:04:24,504 [DEBUG] TC_ID-166 PreCondition: PC_ID-024  Testcase:ECU_Software_UNIT_number_F1_B0_Read(Extendedsession) -> Received payload: [98, 241, 176, 1]
+2026-05-18 10:04:24,505 [WARNING] -----------------------------------------------TC_ID-166 PreCondition: PC_ID-024  Testcase:ECU_Software_UNIT_number_F1_B0_Read(Extendedsession) -> FAIL - Expected [4, 98, 241, 176, 1, 170, 170, 170], got [98, 241, 176, 1]-----------------------------------------------
+2026-05-18 10:04:24,506 [DEBUG] Stopping CanStack
+2026-05-18 10:04:24,507 [DEBUG] Main thread is exiting
+2026-05-18 10:04:24,552 [DEBUG] CanStack Stopped
+2026-05-18 10:04:24,554 [INFO] Connection closed
+2026-05-18 10:04:24,555 [INFO] Running Test Case: TC_ID-167
+2026-05-18 10:04:24,557 [DEBUG] Starting CanStack
+2026-05-18 10:04:24,559 [DEBUG] Main thread has started
+2026-05-18 10:04:24,560 [DEBUG] Relay thread has started
+2026-05-18 10:04:24,566 [INFO] Connection opened
+2026-05-18 10:04:24,567 [INFO] Switched to physical mode for TC: TC_ID-167 Step: PreCondition: PC_ID-024  Testcase:ECU_Software_UNIT1_Version_F1_B1_Read(Extendedsession)
+2026-05-18 10:04:24,569 [INFO] TC_ID-167 - PreCondition: PC_ID-024  Testcase:ECU_Software_UNIT1_Version_F1_B1_Read(Extendedsession): SID=0x22, Sub=0xF1B1, Expected=[16, 8, 98, 241, 177, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170]
+2026-05-18 10:04:24,571 [DEBUG] Sending 3 bytes : [22f1b1]
+2026-05-18 10:04:24,572 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:24,574 [DEBUG] Tx: <706> (08) [ ]	 0322f1b100000000
+2026-05-18 10:04:24,575 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,576 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 b1 00 00 00 00
+2026-05-18 10:04:24,601 [DEBUG] Rx: <70E> (08) [p]	 100862f1b1323541
+2026-05-18 10:04:24,603 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:24,604 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,605 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:24,606 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:24,612 [DEBUG] Rx: <70E> (08) [p]	 213130aaaaaaaaaa
+2026-05-18 10:04:24,614 [DEBUG] Received 8 bytes : [62f1b13235413130]
+2026-05-18 10:04:24,665 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:24,666 [DEBUG] TC_ID-167 PreCondition: PC_ID-024  Testcase:ECU_Software_UNIT1_Version_F1_B1_Read(Extendedsession) -> Received payload: [98, 241, 177, 50, 53, 65, 49, 48]
+2026-05-18 10:04:24,668 [WARNING] -----------------------------------------------TC_ID-167 PreCondition: PC_ID-024  Testcase:ECU_Software_UNIT1_Version_F1_B1_Read(Extendedsession) -> FAIL - Expected [16, 8, 98, 241, 177, 48, 49, 46, 48, 48, 170, 170, 170, 170, 170], got [98, 241, 177, 50, 53, 65, 49, 48]-----------------------------------------------
+2026-05-18 10:04:24,669 [DEBUG] Stopping CanStack
+2026-05-18 10:04:24,671 [DEBUG] Main thread is exiting
+2026-05-18 10:04:24,715 [DEBUG] CanStack Stopped
+2026-05-18 10:04:24,716 [INFO] Connection closed
+2026-05-18 10:04:24,717 [INFO] Running Test Case: TC_ID-168
+2026-05-18 10:04:24,718 [DEBUG] Starting CanStack
+2026-05-18 10:04:24,720 [DEBUG] Main thread has started
+2026-05-18 10:04:24,721 [DEBUG] Relay thread has started
+2026-05-18 10:04:24,728 [INFO] Connection opened
+2026-05-18 10:04:24,729 [INFO] Switched to physical mode for TC: TC_ID-168 Step: PreCondition: PC_ID-024  Testcase:S_W_Version_Dataidentifier_F1_DD_Read(Extendedsession)
+2026-05-18 10:04:24,730 [INFO] TC_ID-168 - PreCondition: PC_ID-024  Testcase:S_W_Version_Dataidentifier_F1_DD_Read(Extendedsession): SID=0x22, Sub=0xF1DD, Expected=[16, 11, 98, 241, 221, 48, 49, 46, 48, 48, 46, 48, 49, 170, 170]
+2026-05-18 10:04:24,731 [DEBUG] Sending 3 bytes : [22f1dd]
+2026-05-18 10:04:24,732 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:24,734 [DEBUG] Tx: <706> (08) [ ]	 0322f1dd00000000
+2026-05-18 10:04:24,735 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,737 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 dd 00 00 00 00
+2026-05-18 10:04:24,763 [DEBUG] Rx: <70E> (08) [p]	 100a62f1dd323541
+2026-05-18 10:04:24,767 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:24,767 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,768 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:24,769 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:24,771 [DEBUG] Rx: <70E> (08) [p]	 2131303030aaaaaa
+2026-05-18 10:04:24,774 [DEBUG] Received 10 bytes : [62f1dd32354131303030]
+2026-05-18 10:04:24,824 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:24,825 [DEBUG] TC_ID-168 PreCondition: PC_ID-024  Testcase:S_W_Version_Dataidentifier_F1_DD_Read(Extendedsession) -> Received payload: [98, 241, 221, 50, 53, 65, 49, 48, 48, 48]
+2026-05-18 10:04:24,826 [WARNING] -----------------------------------------------TC_ID-168 PreCondition: PC_ID-024  Testcase:S_W_Version_Dataidentifier_F1_DD_Read(Extendedsession) -> FAIL - Expected [16, 11, 98, 241, 221, 48, 49, 46, 48, 48, 46, 48, 49, 170, 170], got [98, 241, 221, 50, 53, 65, 49, 48, 48, 48]-----------------------------------------------
+2026-05-18 10:04:24,827 [DEBUG] Stopping CanStack
+2026-05-18 10:04:24,828 [DEBUG] Main thread is exiting
+2026-05-18 10:04:24,873 [DEBUG] CanStack Stopped
+2026-05-18 10:04:24,875 [INFO] Connection closed
+2026-05-18 10:04:24,876 [INFO] Running Test Case: TC_ID-169
+2026-05-18 10:04:24,877 [DEBUG] Starting CanStack
+2026-05-18 10:04:24,878 [DEBUG] Main thread has started
+2026-05-18 10:04:24,879 [DEBUG] Relay thread has started
+2026-05-18 10:04:24,881 [INFO] Connection opened
+2026-05-18 10:04:24,882 [INFO] Switched to physical mode for TC: TC_ID-169 Step: PreCondition: PC_ID-024  Testcase:SystemNameOrEngineTypeDataIdentifier_Read(Extendedsession)
+2026-05-18 10:04:24,883 [INFO] TC_ID-169 - PreCondition: PC_ID-024  Testcase:SystemNameOrEngineTypeDataIdentifier_Read(Extendedsession): SID=0x22, Sub=0xF197, Expected=[7, 98, 241, 151, 77, 75, 66, 68]
+2026-05-18 10:04:24,884 [DEBUG] Sending 3 bytes : [22f197]
+2026-05-18 10:04:24,885 [DEBUG] Enqueuing a SendRequest for 3 bytes and TAT=Physical
+2026-05-18 10:04:24,887 [DEBUG] Tx: <706> (08) [ ]	 0322f19700000000
+2026-05-18 10:04:24,888 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,888 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    03 22 f1 97 00 00 00 00
+2026-05-18 10:04:24,912 [DEBUG] Rx: <70E> (08) [p]	 100e62f197534856
+2026-05-18 10:04:24,914 [DEBUG] Tx: <706> (08) [ ]	 3008640000000000
+2026-05-18 10:04:24,919 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:24,923 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    30 08 64 00 00 00 00 00
+2026-05-18 10:04:24,929 [DEBUG] TxState=IDLE - RxState=WAIT_CF
+2026-05-18 10:04:24,933 [DEBUG] Rx: <70E> (08) [p]	 21555f4652202020
+2026-05-18 10:04:25,036 [DEBUG] Rx: <70E> (08) [p]	 2220aaaaaaaaaaaa
+2026-05-18 10:04:25,037 [DEBUG] Received 14 bytes : [62f197534856555f465220202020]
+2026-05-18 10:04:25,087 [DEBUG] TxState=IDLE - RxState=IDLE
+2026-05-18 10:04:25,088 [DEBUG] TC_ID-169 PreCondition: PC_ID-024  Testcase:SystemNameOrEngineTypeDataIdentifier_Read(Extendedsession) -> Received payload: [98, 241, 151, 83, 72, 86, 85, 95, 70, 82, 32, 32, 32, 32]
+2026-05-18 10:04:25,091 [WARNING] -----------------------------------------------TC_ID-169 PreCondition: PC_ID-024  Testcase:SystemNameOrEngineTypeDataIdentifier_Read(Extendedsession) -> FAIL - Expected [7, 98, 241, 151, 77, 75, 66, 68], got [98, 241, 151, 83, 72, 86, 85, 95]-----------------------------------------------
+2026-05-18 10:04:25,092 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,093 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,137 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,138 [INFO] Connection closed
+2026-05-18 10:04:25,140 [INFO] Running Test Case: TC_ID-175
+2026-05-18 10:04:25,141 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,143 [DEBUG] Main thread has started
+2026-05-18 10:04:25,145 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,148 [INFO] Connection opened
+2026-05-18 10:04:25,149 [INFO] Switched to physical mode for TC: TC_ID-175 Step: PreCondition: PC_ID-025  Testcase:Supported check DID
+2026-05-18 10:04:25,150 [INFO] TC_ID-175 - PreCondition: PC_ID-025  Testcase:Supported check DID: SID=0x2F, Sub=0xF010, Expected=[6, 80, 3, 0, 50, 1, 244, 170]
+2026-05-18 10:04:25,151 [ERROR] ----------------------------------TC_ID-175 PreCondition: PC_ID-025  Testcase:Supported check DID -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,152 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,153 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,199 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,201 [INFO] Connection closed
+2026-05-18 10:04:25,201 [INFO] Running Test Case: TC_ID-178
+2026-05-18 10:04:25,203 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,204 [DEBUG] Main thread has started
+2026-05-18 10:04:25,206 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,208 [INFO] Connection opened
+2026-05-18 10:04:25,209 [INFO] Switched to physical mode for TC: TC_ID-178 Step: PreCondition: PC_ID-025  Testcase:FRONT SEAT Vent Mode to the High START
+2026-05-18 10:04:25,210 [INFO] TC_ID-178 - PreCondition: PC_ID-025  Testcase:FRONT SEAT Vent Mode to the High START: SID=0x2F, Sub=0xF012, Expected=[9, 80, 3, 0, 50, 1, 244, 170]
+2026-05-18 10:04:25,212 [ERROR] ----------------------------------TC_ID-178 PreCondition: PC_ID-025  Testcase:FRONT SEAT Vent Mode to the High START -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,213 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,215 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,259 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,260 [INFO] Connection closed
+2026-05-18 10:04:25,261 [INFO] Running Test Case: TC_ID-179
+2026-05-18 10:04:25,262 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,265 [DEBUG] Main thread has started
+2026-05-18 10:04:25,267 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,269 [INFO] Connection opened
+2026-05-18 10:04:25,270 [INFO] Switched to physical mode for TC: TC_ID-179 Step: PreCondition: PC_ID-025  Testcase:FRONT SEAT Vent Mode to the High STOP
+2026-05-18 10:04:25,271 [INFO] TC_ID-179 - PreCondition: PC_ID-025  Testcase:FRONT SEAT Vent Mode to the High STOP: SID=0x2F, Sub=0xF012, Expected=[16, 80, 3, 0, 50, 1, 244, 170]
+2026-05-18 10:04:25,273 [ERROR] ----------------------------------TC_ID-179 PreCondition: PC_ID-025  Testcase:FRONT SEAT Vent Mode to the High STOP -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,274 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,276 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,321 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,322 [INFO] Connection closed
+2026-05-18 10:04:25,324 [INFO] Running Test Case: TC_ID-182
+2026-05-18 10:04:25,325 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,328 [DEBUG] Main thread has started
+2026-05-18 10:04:25,332 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,340 [INFO] Connection opened
+2026-05-18 10:04:25,343 [INFO] Switched to physical mode for TC: TC_ID-182 Step: PreCondition: PC_ID-025  Testcase:DRIVER SEAT Vent Mode to the High START
+2026-05-18 10:04:25,344 [INFO] TC_ID-182 - PreCondition: PC_ID-025  Testcase:DRIVER SEAT Vent Mode to the High START: SID=0x2F, Sub=0xF014, Expected=[19, 80, 3, 0, 50, 1, 244, 170]
+2026-05-18 10:04:25,345 [ERROR] ----------------------------------TC_ID-182 PreCondition: PC_ID-025  Testcase:DRIVER SEAT Vent Mode to the High START -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,345 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,346 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,392 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,396 [INFO] Connection closed
+2026-05-18 10:04:25,398 [INFO] Running Test Case: TC_ID-183
+2026-05-18 10:04:25,399 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,400 [DEBUG] Main thread has started
+2026-05-18 10:04:25,401 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,403 [INFO] Connection opened
+2026-05-18 10:04:25,404 [INFO] Switched to physical mode for TC: TC_ID-183 Step: PreCondition: PC_ID-025  Testcase:DRIVER SEAT Vent Mode to the High STOP
+2026-05-18 10:04:25,404 [INFO] TC_ID-183 - PreCondition: PC_ID-025  Testcase:DRIVER SEAT Vent Mode to the High STOP: SID=0x2F, Sub=0xF014, Expected=[20, 80, 3, 0, 50, 1, 244, 170]
+2026-05-18 10:04:25,405 [ERROR] ----------------------------------TC_ID-183 PreCondition: PC_ID-025  Testcase:DRIVER SEAT Vent Mode to the High STOP -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,406 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,407 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,454 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,455 [INFO] Connection closed
+2026-05-18 10:04:25,456 [INFO] Running Test Case: TC_ID-186
+2026-05-18 10:04:25,457 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,458 [DEBUG] Main thread has started
+2026-05-18 10:04:25,460 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,461 [INFO] Connection opened
+2026-05-18 10:04:25,462 [INFO] Switched to physical mode for TC: TC_ID-186 Step: PreCondition: PC_ID-025  Testcase:PASSENGER SEAT Vent Mode to the High START
+2026-05-18 10:04:25,463 [INFO] TC_ID-186 - PreCondition: PC_ID-025  Testcase:PASSENGER SEAT Vent Mode to the High START: SID=0x2F, Sub=0xF016, Expected=[23, 80, 3, 0, 50, 1, 244, 170]
+2026-05-18 10:04:25,464 [ERROR] ----------------------------------TC_ID-186 PreCondition: PC_ID-025  Testcase:PASSENGER SEAT Vent Mode to the High START -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,465 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,467 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,512 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,513 [INFO] Connection closed
+2026-05-18 10:04:25,514 [INFO] Running Test Case: TC_ID-187
+2026-05-18 10:04:25,515 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,517 [DEBUG] Main thread has started
+2026-05-18 10:04:25,518 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,520 [INFO] Connection opened
+2026-05-18 10:04:25,521 [INFO] Switched to physical mode for TC: TC_ID-187 Step: PreCondition: PC_ID-025  Testcase:PASSENGER SEAT Vent Mode to the High STOP
+2026-05-18 10:04:25,523 [INFO] TC_ID-187 - PreCondition: PC_ID-025  Testcase:PASSENGER SEAT Vent Mode to the High STOP: SID=0x2F, Sub=0xF016, Expected=[24, 80, 3, 0, 50, 1, 244, 170]
+2026-05-18 10:04:25,524 [ERROR] ----------------------------------TC_ID-187 PreCondition: PC_ID-025  Testcase:PASSENGER SEAT Vent Mode to the High STOP -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,526 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,528 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,571 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,572 [INFO] Connection closed
+2026-05-18 10:04:25,573 [INFO] Running Test Case: TC_ID-645
+2026-05-18 10:04:25,574 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,576 [DEBUG] Main thread has started
+2026-05-18 10:04:25,577 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,582 [INFO] Connection opened
+2026-05-18 10:04:25,583 [INFO] Switched to physical mode for TC: TC_ID-645 Step: PreCondition: PC_ID-003  Testcase:Fault memory clear Extended session(14 FFFFFF)
+2026-05-18 10:04:25,583 [INFO] TC_ID-645 - PreCondition: PC_ID-003  Testcase:Fault memory clear Extended session(14 FFFFFF): SID=0x14, Sub=0xFFFFFF, Expected=[1, 84, 170, 170, 170, 170, 170, 170]
+2026-05-18 10:04:25,585 [DEBUG] Sending 4 bytes : [14ffffff]
+2026-05-18 10:04:25,587 [DEBUG] Enqueuing a SendRequest for 4 bytes and TAT=Physical
+2026-05-18 10:04:25,589 [DEBUG] Tx: <706> (08) [ ]	 0414ffffff000000
+2026-05-18 10:04:25,590 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:25,592 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    04 14 ff ff ff 00 00 00
+2026-05-18 10:04:25,602 [DEBUG] Rx: <70E> (08) [p]	 0154aaaaaaaaaaaa
+2026-05-18 10:04:25,604 [DEBUG] Received 1 bytes : [54]
+2026-05-18 10:04:25,605 [ERROR] ----------------------------------TC_ID-645 PreCondition: PC_ID-003  Testcase:Fault memory clear Extended session(14 FFFFFF) -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,607 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,609 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,653 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,654 [INFO] Connection closed
+2026-05-18 10:04:25,656 [INFO] Running Test Case: TC_ID-646
+2026-05-18 10:04:25,657 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,659 [DEBUG] Main thread has started
+2026-05-18 10:04:25,664 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,670 [INFO] Connection opened
+2026-05-18 10:04:25,673 [INFO] Switched to physical mode for TC: TC_ID-646 Step: PreCondition: PC_ID-003  Testcase:Fault memory clear Extended session(14 FFFFFF)
+2026-05-18 10:04:25,677 [INFO] TC_ID-646 - PreCondition: PC_ID-003  Testcase:Fault memory clear Extended session(14 FFFFFF): SID=0x14, Sub=0x8000FF, Expected=[1, 84, 170, 170, 170, 170, 170, 170]
+2026-05-18 10:04:25,677 [DEBUG] Sending 4 bytes : [148000ff]
+2026-05-18 10:04:25,678 [DEBUG] Enqueuing a SendRequest for 4 bytes and TAT=Physical
+2026-05-18 10:04:25,680 [DEBUG] Tx: <706> (08) [ ]	 04148000ff000000
+2026-05-18 10:04:25,681 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:25,682 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    04 14 80 00 ff 00 00 00
+2026-05-18 10:04:25,692 [DEBUG] Rx: <70E> (08) [p]	 0154aaaaaaaaaaaa
+2026-05-18 10:04:25,695 [DEBUG] Received 1 bytes : [54]
+2026-05-18 10:04:25,696 [ERROR] ----------------------------------TC_ID-646 PreCondition: PC_ID-003  Testcase:Fault memory clear Extended session(14 FFFFFF) -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,697 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,698 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,743 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,744 [INFO] Connection closed
+2026-05-18 10:04:25,745 [INFO] Running Test Case: TC_ID-647
+2026-05-18 10:04:25,747 [DEBUG] Starting CanStack
+2026-05-18 10:04:25,749 [DEBUG] Main thread has started
+2026-05-18 10:04:25,751 [DEBUG] Relay thread has started
+2026-05-18 10:04:25,753 [INFO] Connection opened
+2026-05-18 10:04:25,754 [INFO] Switched to physical mode for TC: TC_ID-647 Step: PreCondition: PC_ID-003  Testcase:Conditions not correct(invalid range)(14 FFEEEE)
+2026-05-18 10:04:25,755 [INFO] TC_ID-647 - PreCondition: PC_ID-003  Testcase:Conditions not correct(invalid range)(14 FFEEEE): SID=0x14, Sub=0xFFFFFE, Expected=[3, 127, 20, 49, 170, 170, 170, 170]
+2026-05-18 10:04:25,756 [DEBUG] Sending 4 bytes : [14fffffe]
+2026-05-18 10:04:25,757 [DEBUG] Enqueuing a SendRequest for 4 bytes and TAT=Physical
+2026-05-18 10:04:25,759 [DEBUG] Tx: <706> (08) [ ]	 0414fffffe000000
+2026-05-18 10:04:25,761 [DEBUG] We've been asked to write a message to the bus
+2026-05-18 10:04:25,762 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    04 14 ff ff fe 00 00 00
+2026-05-18 10:04:25,775 [DEBUG] Rx: <70E> (08) [p]	 037f1431aaaaaaaa
+2026-05-18 10:04:25,782 [DEBUG] Received 3 bytes : [7f1431]
+2026-05-18 10:04:25,785 [ERROR] ----------------------------------TC_ID-647 PreCondition: PC_ID-003  Testcase:Conditions not correct(invalid range)(14 FFEEEE) -> FAIL - No response received (timeout)----------------------------------
+2026-05-18 10:04:25,789 [DEBUG] Stopping CanStack
+2026-05-18 10:04:25,790 [DEBUG] Main thread is exiting
+2026-05-18 10:04:25,826 [DEBUG] CanStack Stopped
+2026-05-18 10:04:25,830 [INFO] Connection closed
+2026-05-18 10:04:26,773 [ERROR] [CANLogger] Error during stop: I/O operation on closed file.
+2026-05-18 10:04:26,774 [WARNING] SocketcanBus was not properly shut down
+2026-05-18 10:04:26,775 [DEBUG] Closing raw can socket
+2026-05-18 10:04:28,276 [INFO] ----------------------------------Log Generated!----------------------------------
+2026-05-18 10:04:30,314 [WARNING] SocketcanBus was not properly shut down
+2026-05-18 10:04:30,315 [DEBUG] Closing raw can socket
+2026-05-18 10:04:30,316 [WARNING] SocketcanBus was not properly shut down
+2026-05-18 10:04:30,317 [DEBUG] Closing raw can socket
+2026-05-18 10:04:30,317 [WARNING] SocketcanBus was not properly shut down
+2026-05-18 10:04:30,318 [DEBUG] Closing raw can socket
+2026-05-18 10:04:30,318 [WARNING] SocketcanBus was not properly shut down
+2026-05-18 10:04:30,319 [DEBUG] Closing raw can socket
+2026-05-18 10:04:30,472 [INFO] ----------------------------------Report Generated----------------------------------
+2026-05-18 10:04:32,473 [INFO] ----------------------------------Done-----------------------------------------------
