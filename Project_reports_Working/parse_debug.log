@@ -1,0 +1,128 @@
+2026-05-22 18:01:46,104 [INFO] ----------------------------------Welcome to Diagnostics-----------------------------------------------
+2026-05-22 18:01:48,105 [INFO] ----------------------------------Initializing-----------------------------------------------
+2026-05-22 18:01:49,607 [INFO] ----------------------------------Waiting for CAN-----------------------------------------------
+2026-05-22 18:01:49,704 [INFO] Bringing up CAN interface can0...
+2026-05-22 18:01:50,198 [INFO] CAN interface can0 successfully brought up.
+2026-05-22 18:01:51,199 [INFO] Creating temporary UDS client...
+2026-05-22 18:01:51,210 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-22 18:01:51,243 [INFO] Created a socket
+2026-05-22 18:01:51,244 [DEBUG] Binding socket to channel=can0
+2026-05-22 18:01:51,244 [DEBUG] Bound socket.
+2026-05-22 18:01:51,248 [DEBUG] Given rxfn is considered blocking
+2026-05-22 18:01:51,252 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-22 18:01:51,253 [INFO] Created a socket
+2026-05-22 18:01:51,254 [DEBUG] Binding socket to channel=can0
+2026-05-22 18:01:51,254 [DEBUG] Bound socket.
+2026-05-22 18:01:51,257 [DEBUG] Given rxfn is considered blocking
+2026-05-22 18:01:51,259 [INFO] CANLogger: Logging only UDS traffic (tx/rx physical+functional)
+2026-05-22 18:01:51,260 [INFO] Trying basic communication with ECU...
+2026-05-22 18:01:51,260 [DEBUG] Starting CanStack
+2026-05-22 18:01:51,262 [DEBUG] Main thread has started
+2026-05-22 18:01:51,263 [DEBUG] Relay thread has started
+2026-05-22 18:01:51,264 [INFO] Connection opened
+2026-05-22 18:01:51,265 [INFO] TesterPresent<0x3e> - Sending TesterPresent request
+2026-05-22 18:01:51,266 [DEBUG] Sending request to server
+2026-05-22 18:01:51,267 [DEBUG] Sending 2 bytes : [3e00]
+2026-05-22 18:01:51,267 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-22 18:01:51,268 [DEBUG] Waiting for server response
+2026-05-22 18:01:51,269 [DEBUG] Tx: <706> (08) [ ]	 023e000000000000
+2026-05-22 18:01:51,269 [DEBUG] We've been asked to write a message to the bus
+2026-05-22 18:01:51,270 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 3e 00 00 00 00 00 00
+2026-05-22 18:01:51,420 [DEBUG] No data received: [TimeoutException] - Did not receive IsoTP frame from the Transport layer in time (timeout=0.15 sec) 
+2026-05-22 18:01:51,420 [ERROR] [TimeoutException] : Did not receive response in time. P2 timeout time has expired (timeout=0.150 sec)
+2026-05-22 18:01:51,421 [DEBUG] Stopping CanStack
+2026-05-22 18:01:51,422 [DEBUG] Main thread is exiting
+2026-05-22 18:01:51,438 [DEBUG] CanStack Stopped
+2026-05-22 18:01:51,439 [INFO] Connection closed
+2026-05-22 18:01:51,439 [WARNING] Tester Present failed: Did not receive response in time. P2 timeout time has expired (timeout=0.150 sec)
+2026-05-22 18:01:51,439 [WARNING] No response from ECU.
+2026-05-22 18:01:51,440 [INFO] ----------------------------------Waiting for ECU-----------------------------------------------
+2026-05-22 18:01:53,451 [INFO] Bringing up CAN interface can0...
+2026-05-22 18:01:53,657 [INFO] CAN interface can0 successfully brought up.
+2026-05-22 18:01:54,658 [INFO] Creating temporary UDS client...
+2026-05-22 18:01:54,662 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-22 18:01:54,662 [INFO] Created a socket
+2026-05-22 18:01:54,663 [DEBUG] Binding socket to channel=can0
+2026-05-22 18:01:54,663 [DEBUG] Bound socket.
+2026-05-22 18:01:54,666 [DEBUG] Given rxfn is considered blocking
+2026-05-22 18:01:54,670 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-22 18:01:54,671 [INFO] Created a socket
+2026-05-22 18:01:54,671 [DEBUG] Binding socket to channel=can0
+2026-05-22 18:01:54,672 [DEBUG] Bound socket.
+2026-05-22 18:01:54,675 [DEBUG] Given rxfn is considered blocking
+2026-05-22 18:01:54,677 [INFO] CANLogger: Logging only UDS traffic (tx/rx physical+functional)
+2026-05-22 18:01:54,677 [INFO] Trying basic communication with ECU...
+2026-05-22 18:01:54,678 [DEBUG] Starting CanStack
+2026-05-22 18:01:54,679 [DEBUG] Main thread has started
+2026-05-22 18:01:54,680 [DEBUG] Relay thread has started
+2026-05-22 18:01:54,681 [INFO] Connection opened
+2026-05-22 18:01:54,681 [INFO] TesterPresent<0x3e> - Sending TesterPresent request
+2026-05-22 18:01:54,682 [DEBUG] Sending request to server
+2026-05-22 18:01:54,682 [DEBUG] Sending 2 bytes : [3e00]
+2026-05-22 18:01:54,683 [DEBUG] Enqueuing a SendRequest for 2 bytes and TAT=Physical
+2026-05-22 18:01:54,683 [DEBUG] Waiting for server response
+2026-05-22 18:01:54,684 [DEBUG] Tx: <706> (08) [ ]	 023e000000000000
+2026-05-22 18:01:54,685 [DEBUG] We've been asked to write a message to the bus
+2026-05-22 18:01:54,685 [DEBUG] sending: Timestamp:        0.000000    ID:      706    S Rx     F BS       DL:  8    02 3e 00 00 00 00 00 00
+2026-05-22 18:01:54,697 [DEBUG] Rx: <70E> (08) [p]	 027e00aaaaaaaaaa
+2026-05-22 18:01:54,698 [DEBUG] Received 2 bytes : [7e00]
+2026-05-22 18:01:54,699 [DEBUG] Received response from server
+2026-05-22 18:01:54,700 [INFO] Received positive response for service TesterPresent (0x3e) from server.
+2026-05-22 18:01:54,700 [DEBUG] Stopping CanStack
+2026-05-22 18:01:54,701 [DEBUG] Main thread is exiting
+2026-05-22 18:01:54,747 [DEBUG] CanStack Stopped
+2026-05-22 18:01:54,748 [INFO] Connection closed
+2026-05-22 18:01:54,748 [INFO] UDS communication successful.
+2026-05-22 18:01:54,749 [INFO] ----------------------------------ECU Ready-----------------------------------------------
+2026-05-22 18:01:54,751 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-22 18:01:54,752 [INFO] Created a socket
+2026-05-22 18:01:54,753 [DEBUG] Binding socket to channel=can0
+2026-05-22 18:01:54,753 [DEBUG] Bound socket.
+2026-05-22 18:01:54,756 [DEBUG] Given rxfn is considered blocking
+2026-05-22 18:01:54,760 [DEBUG] can config: {'fd': True, 'can_filters': [{'can_id': 1806, 'can_mask': 2047, 'extended': False}], 'interface': 'socketcan', 'channel': 'can0'}
+2026-05-22 18:01:54,761 [INFO] Created a socket
+2026-05-22 18:01:54,761 [DEBUG] Binding socket to channel=can0
+2026-05-22 18:01:54,762 [DEBUG] Bound socket.
+2026-05-22 18:01:54,764 [DEBUG] Given rxfn is considered blocking
+2026-05-22 18:01:54,767 [INFO] CANLogger: Logging only UDS traffic (tx/rx physical+functional)
+2026-05-22 18:01:54,767 [INFO] USBTransfer initialized
+
+Select an option:
+1. Read ECU Info
+2. Run Test Cases
+3. Shut Down
+Enter your choice: Invalid input. Try again.
+
+Select an option:
+1. Read ECU Info
+2. Run Test Cases
+3. Shut Down
+Enter your choice: Invalid input. Try again.
+
+Select an option:
+1. Read ECU Info
+2. Run Test Cases
+3. Shut Down
+Enter your choice: Traceback (most recent call last):
+  File "/home/mobase/Git/Vishwanth/New/Project_reports/main.py", line 247, in <module>
+    main()
+    ~~~~^^
+  File "/home/mobase/Git/Vishwanth/New/Project_reports/main.py", line 244, in main
+    app.main_menu()
+    ~~~~~~~~~~~~~^^
+  File "/home/mobase/Git/Vishwanth/New/Project_reports/main.py", line 156, in main_menu
+    selected_key = input("Enter your choice: ").strip()
+                   ~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2026-05-22 18:03:44,738 [WARNING] SocketcanBus was not properly shut down
+2026-05-22 18:03:44,739 [DEBUG] Closing raw can socket
+2026-05-22 18:03:44,740 [WARNING] SocketcanBus was not properly shut down
+2026-05-22 18:03:44,741 [DEBUG] Closing raw can socket
+2026-05-22 18:03:44,742 [WARNING] SocketcanBus was not properly shut down
+2026-05-22 18:03:44,743 [DEBUG] Closing raw can socket
+2026-05-22 18:03:44,744 [WARNING] SocketcanBus was not properly shut down
+2026-05-22 18:03:44,745 [DEBUG] Closing raw can socket
+2026-05-22 18:03:44,839 [WARNING] SocketcanBus was not properly shut down
+2026-05-22 18:03:44,840 [DEBUG] Closing raw can socket
+2026-05-22 18:03:44,841 [WARNING] SocketcanBus was not properly shut down
+2026-05-22 18:03:44,841 [DEBUG] Closing raw can socket
