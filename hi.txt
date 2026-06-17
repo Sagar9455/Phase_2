@@ -1,1 +1,110 @@
-New
+#!/bin/bash
+
+set -e
+
+echo "======================================="
+echo "   UDS FULL AUTO BUILD (ZERO SETUP)"
+echo "======================================="
+
+# STEP 0: Ensure apt works
+
+echo "[0/6] Preparing system..."
+sudo apt-get update -y
+
+# STEP 1: Install Python if missing
+
+echo "[1/6] Checking Python..."
+if ! command -v python3 >/dev/null 2>&1; then
+echo "Installing Python3..."
+sudo apt-get install -y python3
+fi
+
+# STEP 2: Install pip if missing
+
+echo "[2/6] Checking pip..."
+if ! python3 -m pip --version >/dev/null 2>&1; then
+echo "Installing pip..."
+sudo apt-get install -y python3-pip
+fi
+
+# STEP 3: Install system dependencies (Pillow fix)
+
+echo "[3/6] Installing system dependencies..."
+sudo apt-get install -y 
+python3-dev build-essential 
+libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev 
+libopenjp2-7-dev libtiff5-dev libwebp-dev 
+tcl8.6-dev tk8.6-dev
+
+# STEP 4: Python dependencies
+
+echo "[4/6] Installing Python packages..."
+
+python3 -m pip install --upgrade pip setuptools wheel
+
+# Install Pillow safely (no compile errors)
+
+python3 -m pip install --only-binary :all: Pillow
+
+python3 -m pip install 
+pyinstaller 
+RPi.GPIO 
+adafruit-circuitpython-ssd1306 
+adafruit-blinka 
+python-can 
+can-isotp 
+udsoncan
+
+# STEP 5: Prepare project
+
+echo "[5/6] Preparing project..."
+touch drivers/**init**.py
+
+# STEP 6: Build executable
+
+echo "[6/6] Building executable..."
+
+python3 -m PyInstaller 
+--onefile 
+--name uds_diagnostics 
+--add-data "config.json:." 
+--add-data "drivers:drivers" 
+--hidden-import=RPi 
+--hidden-import=RPi.GPIO 
+--hidden-import=board 
+--hidden-import=busio 
+--hidden-import=adafruit_ssd1306 
+--hidden-import=PIL 
+--hidden-import=PIL.Image 
+--hidden-import=PIL.ImageDraw 
+--hidden-import=PIL.ImageFont 
+--hidden-import=can 
+--hidden-import=can.interfaces.socketcan 
+--hidden-import=can.io.asc 
+--hidden-import=isotp 
+--hidden-import=udsoncan 
+--hidden-import=udsoncan.client 
+--hidden-import=udsoncan.connections 
+--hidden-import=udsoncan.configs 
+--hidden-import=udsoncan.services 
+--hidden-import=drivers 
+--hidden-import=drivers.config_loader 
+--hidden-import=drivers.oled_display 
+--hidden-import=drivers.button_input 
+--hidden-import=drivers.uds_client 
+--hidden-import=drivers.transfer_file 
+--hidden-import=drivers.Parse_handler 
+--hidden-import=drivers.can_logger 
+--hidden-import=drivers.report_generator 
+main.py
+
+echo ""
+echo "======================================="
+echo " ✅ BUILD COMPLETE"
+echo "======================================="
+echo "Executable:"
+echo "  dist/uds_diagnostics"
+echo ""
+echo "Run using:"
+echo "  sudo ./dist/uds_diagnostics"
+echo "======================================="
